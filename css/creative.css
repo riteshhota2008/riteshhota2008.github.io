@@ -220,8 +220,8 @@ header .header-content .header-content-inner p {
 .portfolio-box {
   position: relative;
   display: block;
-  max-width: 650px;
-  margin: 0 auto;
+  max-width: 650px;/*max-width: 650px;*/
+  margin: 0 -20px;/*0 auto*/
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
