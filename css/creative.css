@@ -344,8 +344,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: rgba(244, 164, 96, 0.7);/*#ee4b28*/
-  border-color: #db9356;/*#ed431f*/
+  background-color: rgba(238, 238, 238, 0.7);/*#ee4b28rgba(244, 164, 96, 0.7)*/
+  border-color: #FFFFFF;/*#ed431f----#db9356*/
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -379,7 +379,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  border: 2px solid #f4a460;/*border: none;*/
+  border: 2px solid #FFFFFF;/*border: none;*/
     background-color: transparent;/*changed*/
   border-radius: 3px;
   font-weight: 700;
