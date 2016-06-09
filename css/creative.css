@@ -224,7 +224,7 @@ header .header-content .header-content-inner p {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(244, 164, 96, 0.9);/*rgba(240,95,64,0.9)244,164,96,1*/
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -272,14 +272,14 @@ header .header-content .header-content-inner p {
   margin: 0 auto 20px;
 }
 .text-primary {
-  color: #f05f40;
+  color: #f4a460;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
 .btn-default {
-  color: #222222;
+  color: #FFFFFF;/*#222222*/
   background-color: #ffffff;
   border-color: #ffffff;
   -webkit-transition: all 0.35s;
@@ -328,8 +328,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #f05f40;
-  border-color: #f05f40;
+  background-color: #F4A460;/*#f05f40*/
+  border-color: #F4A460;/*#f05f40*/
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -341,8 +341,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: rgba(244, 164, 96, 0.9);/*#ee4b28*/
+  border-color: #db9356;/*#ed431f*/
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -376,7 +376,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  border: none;
+  border: 2px solid #f4a460;/*border: none;*/
+    background-color: transparent;/*changed*/
   border-radius: 300px;
   font-weight: 700;
   text-transform: uppercase;
