@@ -1,704 +1,130 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f4a460">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Redefined Corp | Homepage</title>
 
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" sizes="512x512">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
-
-    <title>EasilyBusy</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
-
-    <style>
-
-        h1,h2,h3,p {
-            font-family: 'Alegreya Sans', sans-serif;
-        }
-
-    </style>
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
-    <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
-
-
-
-    <style>
-
-
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-            opacity: 1;
-        }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-            position: absolute;
-            width: 100%;
-            height: 20px;
-            font-size: 20px;
-            text-align: center;
-            top: 50%;
-            margin-top: -12px;
-            color: white;
-        }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-            margin-top: -12px;
-        }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-            margin: 0;
-        }
-        #portfolio .portfolio-item .portfolio-caption {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: white;
-            text-align: center;
-            padding: 25px;
-        }
-        #portfolio .portfolio-item .portfolio-caption h4 {
-            text-transform: none;
-            margin: 0;
-        }
-        #portfolio .portfolio-item .portfolio-caption p {
-            font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-style: italic;
-            font-size: 16px;
-            margin: 0;
-        }
-        #portfolio * {
-            z-index: 2;
-        }
-        @media (min-width: 767px) {
-            #portfolio .portfolio-item {
-                margin: 0 0 30px;
-            }
-        }
-
-    </style>
-
-
-    <style>
-
-        footer {
-            color: white;
-        }
-        footer h3 {
-            margin-bottom: 30px;
-        }
-        footer .footer-above {
-            padding-top: 50px;
-            background-color: #292b49;/*#2c3e50*/
-        }
-        footer .footer-col {
-            margin-bottom: 50px;
-        }
-        footer .footer-below {
-            padding: 25px 0;
-            background-color: #121435;/*#233140*/
-        }
-        .btn-social {
-            display: inline-block;
-            height: 50px;
-            width: 50px;
-            border: 2px solid white;
-            border-radius: 100%;
-            text-align: center;
-            font-size: 20px;
-            line-height: 45px;
-        }
-        .btn:focus,
-        .btn:active,
-        .btn.active {
-            outline: none;
-        }
-
-    </style>
-
-    <style>
-
-        /* Reset */
-
-        .social-buttons {
-            height: 50px;
-            margin: auto;
-            font-size: 0;
-            text-align: center;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .social-button {
-            display: inline-block;
-            background-color: #fff;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            margin: 0 10px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            opacity: .99;
-            border-radius: 28%;
-            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-            -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-            transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-        }
-        .social-button:before {
-            content: '';
-            background-color: #000;
-            width: 120%;
-            height: 120%;
-            position: absolute;
-            top: 90%;
-            left: -110%;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-            transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-        }
-        .social-button .fa {
-            font-size: 38px;
-            vertical-align: middle;
-            -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-            -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-            transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-        }
-        .social-button.facebook:before {
-            background-color: #3B5998;
-        }
-        .social-button.facebook .fa {
-            color: #3B5998;
-        }
-        .social-button.twitter:before {
-            background-color: #3CF;
-        }
-        .social-button.twitter .fa {
-            color: #3CF;
-        }
-        .social-button.google:before {
-            background-color: #DC4A38;
-        }
-        .social-button.google .fa {
-            color: #DC4A38;
-        }
-        .social-button.dribbble:before {
-            background-color: #0077b5;
-        }
-        .social-button.dribbble .fa {
-            color: #0077b5;
-        }
-        .social-button.skype:before {
-            background-color: #543A3A;
-        }
-        .social-button.skype .fa {
-            color: #543A3A;
-        }
-        .social-button:focus:before, .social-button:hover:before {
-            top: -10%;
-            left: -10%;
-        }
-        .social-button:focus .fa, .social-button:hover .fa {
-            color: #fff;
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-
-
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--======== All Stylesheet =========-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/linearicons.css" rel="stylesheet">
+    <!--=== plugins ===-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!--=== end plugins ===-->
+    <link rel="shortcut icon" href="images/promo-logo.png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
 </head>
 
-<body id="page-top">
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Easily Busy</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body data-spy="scroll" data-target=".nav-top">
+<!--======== header =========-->
+<header id="home" data-spy="scroll" data-target="#top-nav">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!-- menu 4 -->
+            <div class="navbar navbar-default navbar-fixed-top default-menu menu-4" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#menu-4" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand default-logo scroll" href="index.html"><img src="images/promo-logo.png"
+                                                                                      alt="logo"/>REDEFINED CORP</a>
+                    </div>
+                    <div class="collapse navbar-collapse top-nav" id="menu-4">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="scroll" onclick="goToPage('index.html')">Home</a></li>
+                            <li><a class="scroll" onclick="goToPage('services.html')">Services</a></li>
+                            <li><a class="scroll" onclick="goToPage('aboutus.html')">Get To Know Us</a></li>
+                            <li><a class="scroll" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end menu -->
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+    </div>
+</header>
+<!--======== end header =========-->
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>#Get_easily_busy</h1>
-                <h2>For freelancers, <strong>easilybusy</strong> is the brand that delivers unmatched opportunities because your career is our job.</h2>
-               <!-- <hr> --><br>
-              <!--  <p style="color: #f4a460">Get matched with the job that's right for you.</p>
-                <p>For freelancers, <strong>easilybusy</strong> is the brand that delivers unmatched opportunities because your career is our job.</p>-->
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Learn More</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-primary" id="about" style="background-color: #f4a460"><!--#F4A460-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
-                    <hr class="light">
-                    <p class="text-faded" style="color: #fff;font-size: 20px">Get work done with freelancers. Get amazing results working with the best programmers, designers, writers and other top online pros. Hire freelancers with confidence, always knowing their work experience and feedback from other clients.</p>
-                   <!-- <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>-->
+<!--======== intro =========-->
+<section class="intro">
+    <div class="container">
+        <div class="text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="intro-content">
+                    <h1 class="wow fadeIn" data-wow-delay="0.4s">THE DESTINATION</h1>
+                    <h1 class="wow fadeIn" data-wow-delay="0.4s">TO YOUR IT SOLUTIONS.</h1>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!--======== end intro =========-->
 
-  <!--  <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
+<!--======== about us =========-->
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="about-content">
+                    <h1 class="section-title wow fadeIn" data-wow-delay="0.4s">About Us</h1>
+                    <p class="wow bounceInLeft" data-wow-delay="0.4s">At Redefined corp, we provide various IT services to clients in industries varying from health
+                        care and other financial institutions.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="about-img wow bounceInRight" data-wow-delay="0.4s"><img class="img-responsive" src="images/about.png" alt="about us image"/>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+</section>
+<!--======== end about us =========-->
+
+<!--======== footer =========-->
+<div class="footer">
+    <div class="footer_bottom">
+        <div class="follow-us wow fadeInDown" data-wow-delay="0.4s"><a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon"
+                                                                                      href="#"></a> <a
+                class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a>
         </div>
-    </section> -->
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <div class="page-header"></div>
-                    <!--<h3 class="section-subheading text-muted">Work with someone perfect for your team.</h3>-->
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-briefcase fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                    </span>
-                    <h4 class="service-heading">POST A PROJECT</h4>
-                    <p class="text-muted">Browse profiles, portfolios and reviews to assemble your 24/7 online workforce.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-users fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                    </span>
-                    <h4 class="service-heading">HIRE FREELANCER</h4>
-                    <p class="text-muted">Collaborate in shared online work rooms and receive daily activity reports.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-money fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">PAY FREELANCERS SAFELY</h4>
-                    <p class="text-muted">We only release payment when you are 100% satisfied with the work provided.</p>
-                </div>
-            </div>
+        <div class="copy wow fadeInDown" data-wow-delay="0.4s">
+            <p>Copyright © Pratap Ramanathan. All rights reserved. Designed by <a href="https://www.blipd.in"
+                                                                                rel="nofollow">BlipdIn</a></p>
         </div>
-    </section>
+    </div>
+</div>
+<!--======== end footer =========-->
 
-    <section id="portfolio" style="margin-top: -100px">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get your project started now...</h2>
-                    <div class="page-header"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--======== All Javascript =========-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
 
-    <section class="no-padding" id="portfolio" style="margin-left: 30px;margin-right: 30px;margin-top: -50px;">
-        <div class="container-fluid">
-           <!-- <div class="row no-gutter popup-gallery"> -->
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/web_design.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Web Developers
-                                </div>
-                                <div class="project-name">
-                                    FRONT-END DEVELOPERS<BR/>BACK-END DEVELOPERS<BR/>PROGRAMMERS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/app_design.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Mobile developers
-                                </div>
-                                <div class="project-name">
-                                    OS APP DEVELOPERS<BR/>ANDROID DEVELOPERS<BR/>UI/UX DESIGNERS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/GraphicDesign.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Designers &amp; Creatives
-                                </div>
-                                <div class="project-name">
-                                    GRAPHIC DESIGNERS<BR/>UI/UX DESIGNERS<BR/>MOTION GRAPHICS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/blogging.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Writers
-                                </div>
-                                <div class="project-name">
-                                    BLOG WRITERS<BR/>CONTENT WRITERS<BR/>COPYWRITERS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/virtual_assistant.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Virtual assistants
-                                </div>
-                                <div class="project-name">
-                                    PERSONAL ASSISTANTS<BR/>TRANSCRIPTIONISTS<BR/>WEB RESEARCHERS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/customer_support.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Customer service agents
-                                </div>
-                                <div class="project-name">
-                                    PHONE SUPPORT EXPERTS<BR/>EMAIL SUPPORT EXPERTS<BR/>LIVE CHAT SUPPORT PROS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/sales_marketing.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Sales &amp; marketing experts
-                                </div>
-                                <div class="project-name">
-                                    SEO SPECIALISTS<BR/>EMAIL AUTOMATORS<BR/>MARKETING EXPERTS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Domains/accounting_consulting.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Accountants &amp; consultants
-                                </div>
-                                <div class="project-name">
-                                    TAX ACCOUNTANTS<BR/>BOOKKEEPERS<BR/>FINANCIAL MODELERS
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        <!--</div>-->
-    </section>
-
-    <!-- New services and portfolio -->
-
-    <!-- Services Section -->
-
-
-    <!-- Portfolio Grid Section -->
- <!--   <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- End -->
-
-    <aside class="bg-dark" style="margin-top: 100px" id="contact">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Let's Get In Touch!</h2>
-                <a href="#" class="btn btn-default btn-xl sr-button">Contact Us!</a>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>#95 VMK Vihar, Sanjay Gandhi Nagar<br>Virugambakkam, Chennai - 600092</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3><br><br><br><br><br>
-
-                        <div class="social-buttons"><a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a><a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a><a href="#" class="social-button google"><i class="fa fa-google-plus" aria-hidden="true"></i></a><a href="#" class="social-button dribbble"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="#" class="social-button skype"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </div>
-                   <!--     <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3><!--About Freelancer--></h3>
-                        <a href="#" style="cursor: pointer"> <img src="img/Get_it_on_Google_play.svg.png" width="100%"></a>
-                        <p><!--Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.--></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; EasilyBusy 2016
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+<script>
+    function goToPage(page){
+        $(document).ready(function(){
+            $('body').fadeOut(1000, function(){
+                window.location=page;
+            });
+        });
+    }
+</script>
 
 </body>
-
 </html>

@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Redefined Corp | About Us</title>
+
+    <!--======== All Stylesheet =========-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/linearicons.css" rel="stylesheet">
+    <!--=== plugins ===-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!--=== end plugins ===-->
+    <link rel="shortcut icon" href="images/promo-logo.png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".nav-top">
+<!--======== header =========-->
+<header id="home" data-spy="scroll" data-target="#top-nav">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!-- menu 4 -->
+            <div class="navbar navbar-default navbar-fixed-top default-menu menu-4" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#menu-4" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand default-logo scroll" href="index.html"><img src="images/promo-logo.png"
+                                                                                           alt="logo"/>REDEFINED CORP</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse top-nav" id="menu-4">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="scroll" onclick="goToPage('index.html')">Home</a></li>
+                            <li><a class="scroll" onclick="goToPage('services.html')">Services</a></li>
+                            <li><a class="scroll" onclick="goToPage('aboutus.html')">Get To Know Us</a></li>
+                            <li><a class="scroll" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end menu -->
+        </div>
+    </div>
+</header>
+<!--======== end header =========-->
+
+<!--======== intro =========-->
+<section class="intro">
+    <div class="container">
+        <div class="text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="intro-content">
+                    <h1 class="wow fadeIn" data-wow-delay="0.4s">THE DESTINATION</h1>
+                    <h1 class="wow fadeIn" data-wow-delay="0.4s">TO YOUR IT SOLUTIONS.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--======== end intro =========-->
+
+<!--======== Mission =========-->
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="about-content">
+                    <h1 class="section-title wow fadeIn" data-wow-delay="0.4s">Our Mission</h1>
+                    <p class="wow bounceInLeft" data-wow-delay="0.4s">To deliver quality business solutions in information technology and maximizing technology
+                        opportunities providing a seamless experience to our clients.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="about-content">
+                    <h1 class="section-title wow fadeIn" data-wow-delay="0.4s">Management</h1>
+                    <p class="wow bounceInRight" data-wow-delay="0.4s">Our method of providing a better customer experience is by specialising in providing a realistic
+                        estimate of effort required on any project task both in time and cost. Our people management
+                        skills enable us to provide a seamless experience to the clients by engaging IT experts who are
+                        able to envision the need and execute proactively as against other IT service providers.The team
+                        is led by Mr. Pratap Ramanathan, Founder who brings 25 years of experience in management and
+                        sales of IT. Current areas of focus is in Microsoft Business Intelligence and salesforce.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--======== end mission =========-->
+
+<!--======== footer =========-->
+<div class="footer">
+    <div class="footer_bottom">
+        <div class="follow-us wow fadeInDown" data-wow-delay="0.4s"><a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon"
+                                                                                                                           href="#"></a> <a
+                class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a>
+        </div>
+        <div class="copy wow fadeInDown" data-wow-delay="0.4s">
+            <p>Copyright © Pratap Ramanathan. All rights reserved. Designed by <a href="https://www.blipd.in"
+                                                                                rel="nofollow">BlipdIn</a></p>
+        </div>
+    </div>
+</div>
+<!--======== end footer =========-->
+
+<!--======== All Javascript =========-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+    function goToPage(page){
+        $(document).ready(function(){
+            $('body').fadeOut(1000, function(){
+                window.location=page;
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
