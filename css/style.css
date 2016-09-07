@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,600,500,300,200,100,800);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-/*@import url(https://fonts.googleapis.com/css?family=Playball);*/
 
 body{
     overflow-x: hidden;
@@ -28,7 +27,7 @@ p{
 
 /*===== common ====*/
 .bg-color{
-    background-color: #01BF86 !important;
+    background-color: #6251DA !important;
 }
 
 section{
@@ -43,6 +42,10 @@ section{
 .p-l-r-0{
     padding-left: 0;
     padding-right: 0;
+}
+
+.modal {
+    top: 20%
 }
 
 .small-tag {
@@ -68,7 +71,7 @@ h1.section-title {
 }
 
 h1.section-title::after {
-    border: 4px solid #01bf86;
+    border: 4px solid #6251DA;
     border-radius: 10px;
     content: "";
     display: inline-block;
@@ -86,7 +89,7 @@ h1.section-title::after {
 }
 
 .btn.btn-default {
-    background-color: #01bf86;
+    background-color: #6251DA;
     border-color: transparent;
     border-radius: 30px;
     color: #fff;
@@ -196,7 +199,7 @@ header{
 }
 
 .default-menu.navbar-default .navbar-nav > li > a{
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0;
     color: #476B78;
@@ -205,6 +208,7 @@ header{
     letter-spacing: 0.3px;
     padding: 15px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .default-menu.navbar-default .navbar-nav > li:last-child > a{
@@ -219,18 +223,18 @@ header{
 .default-menu.navbar-default .navbar-nav > li > a:active, 
 .default-menu.navbar-default .navbar-nav > li > a:focus, 
 .default-menu.navbar-default .navbar-nav > li > a:hover{
-    color: #01BF86;
+    color: #6251DA;
 }
 
 .default-menu.navbar-default .navbar-nav > .active > a, 
 .default-menu.navbar-default .navbar-nav > .active > a:focus, 
 .default-menu.navbar-default .navbar-nav > .active > a:hover{
     background-color: transparent;
-    color: #01BF86;
+    color: #6251DA;
 }
 
 .btn.btn-default.navbar-btn {
-    background-color: #01bf86;
+    background-color: #6251DA;
     border-radius: 4px;
     color: #ffffff;
     font-weight: 600;
@@ -240,7 +244,7 @@ header{
 
 .btn.btn-default.navbar-btn:hover{
     color: #fff;
-    background-color: #01BF86;
+    background-color: #6251DA;
     border-color: transparent;
 }
     
@@ -346,8 +350,8 @@ header{
 }
 
 .intro .carousel-indicators li {
-    background-color: #01BF86;
-    border: 2px solid #01BF86;
+    background-color: #6251DA;
+    border: 2px solid #6251DA;
     height: 15px;
     width: 15px;
     margin: 4px;
@@ -431,7 +435,7 @@ header{
 }
     
 .service .media-left .lnr {
-    color: #01BF86 !important;
+    color: #6251DA !important;
     font-size: 25px;
 }
 
@@ -454,7 +458,7 @@ header{
 }
 
 .default-bg{
-    background-color: #01BF86;
+    background-color: #6251DA;
 }
 
 .about-content > p{
@@ -483,7 +487,7 @@ header{
 }
 
 .owl-theme .owl-controls .owl-page span {
-    background: #01BF86;
+    background: #6251DA;
     opacity: 0.3;
     border-radius: 0;
     height: 4px;
@@ -525,7 +529,7 @@ header{
 }
 
 .service-overflow h3{
-    color: #01BF86;
+    color: #6251DA;
     margin-top: 0;
 }
 
@@ -569,7 +573,7 @@ header{
 }
 
 .extra-feature .section-title > span{
-    color: #01BF86;
+    color: #6251DA;
 }
 
 .extra-feature p{; 
@@ -609,7 +613,7 @@ header{
 }
 
 .platform i {
-    color: #01BF86;
+    color: #6251DA;
     background: transparent;
     cursor: pointer;
     font-size: 31px;
@@ -716,7 +720,7 @@ strong.expert-tag{
 }
 
 .talk-about-us strong{
-    color: #01BF86; 
+    color: #6251DA; 
     font-weight: 600;
     font-style: italic;
 }
@@ -753,7 +757,7 @@ strong.expert-tag{
 }
 
 .talk-about-us .carousel-indicators li.active {
-    background-color: #01BF86;
+    background-color: #6251DA;
 }
 
 .talk-about-us .carousel-indicators {
@@ -762,7 +766,7 @@ strong.expert-tag{
 
 /*===== our client ====*/
 .support{
-    background: #01BF86;
+    background: #6251DA;
     padding: 40px 0;
 }
 
@@ -843,13 +847,13 @@ strong.expert-tag{
 }
 
 .social-links .fa {
-    color: #01bf86 ;
+    color: #6251DA ;
     cursor: pointer;
     height: 40px;
     padding-top: 13px;
     text-align: center;
     width: 40px;
-    border: 1px solid #01bf86 ;
+    border: 1px solid #6251DA ;
 }
 
 .social-links .fa:hover{
@@ -861,7 +865,7 @@ strong.expert-tag{
 /*===== footer ====*/
 .footer_bottom {
     padding: 2em 0;
-    background: #2ABB9B;
+    background: #6251DA;
 }
 .copy {
     text-align: center;

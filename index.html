@@ -24,6 +24,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".nav-top">
+
 <!--======== header =========-->
 <header id="home" data-spy="scroll" data-target="#top-nav">
     <div class="row">
@@ -39,7 +40,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand default-logo scroll" href="index.html"><img src="images/promo-logo.png"
+                        <a class="navbar-brand default-logo scroll" onclick="goToPage('index.html')"><img src="images/promo-logo.png"
                                                                                       alt="logo"/>REDEFINED CORP</a>
                     </div>
                     <div class="collapse navbar-collapse top-nav" id="menu-4">
@@ -47,7 +48,7 @@
                             <li><a class="scroll" onclick="goToPage('index.html')">Home</a></li>
                             <li><a class="scroll" onclick="goToPage('services.html')">Services</a></li>
                             <li><a class="scroll" onclick="goToPage('aboutus.html')">Get To Know Us</a></li>
-                            <li><a class="scroll" href="#">Contact Us</a></li>
+                            <li><a class="scroll" onclick="goToPage('contactus.html')">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -95,13 +96,13 @@
 <!--======== footer =========-->
 <div class="footer">
     <div class="footer_bottom">
-        <div class="follow-us wow fadeInDown" data-wow-delay="0.4s"><a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon"
-                                                                                      href="#"></a> <a
-                class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a>
+        <div class="follow-us wow fadeInDown" data-wow-delay="0.4s">
+            <a class="fa fa-facebook social-icon" href="#"></a>
+            <a class="fa fa-twitter social-icon" href="#"></a>
+            <a class="fa fa-google-plus social-icon" href="#"></a>
         </div>
         <div class="copy wow fadeInDown" data-wow-delay="0.4s">
-            <p>Copyright © Pratap Ramanathan. All rights reserved. Designed by <a href="https://www.blipd.in"
-                                                                                rel="nofollow">BlipdIn</a></p>
+            <p>Copyright © Redefined Corp. All rights reserved. Designed by <a href="https://www.blipd.in" rel="nofollow">BlipdIn</a></p>
         </div>
     </div>
 </div>
@@ -125,6 +126,12 @@
         });
     }
 </script>
+
+<!-- Live Chat Widget powered by https://keyreply.com/chat/ -->
+<!-- Advanced options: -->
+<!-- data-align="left" -->
+<!-- data-overlay="true" -->
+<script data-align="right" data-overlay="false" id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="#3F51B5" data-apps="JTdCJTIycGhvbmUlMjI6JTIyNjQ2Nzc5MjQyOCUyMiU3RA=="></script>
 
 </body>
 </html>
