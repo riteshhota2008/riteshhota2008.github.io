@@ -448,7 +448,7 @@ header{
 
 /*===== about us ====*/
 .about-us{
-    background-color: #6251da;/*#F3F6FA*/
+    background-color: #143254;/*#F3F6FA*/
     padding-bottom: 50px;
 }
 
@@ -458,7 +458,7 @@ header{
 }
 
 .default-bg{
-    background-color: #6251da;/*#01bf86*/
+    background-color: #143254;/*#01bf86*/
 }
 
 .about-content > p{
@@ -865,7 +865,7 @@ strong.expert-tag{
 /*===== footer ====*/
 .footer_bottom {
     padding: 2em 0;
-    background: #6251da;
+    background: #143254;
 }
 .copy {
     text-align: center;
