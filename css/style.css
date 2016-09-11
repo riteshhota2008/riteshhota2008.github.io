@@ -11,7 +11,7 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #496174;
+    color: #FFFFFF;/*#496174*/
 }
 
 p{  
@@ -27,7 +27,7 @@ p{
 
 /*===== common ====*/
 .bg-color{
-    background-color: #6251DA !important;
+    background-color: #01bf86 !important;
 }
 
 section{
@@ -71,7 +71,7 @@ h1.section-title {
 }
 
 h1.section-title::after {
-    border: 4px solid #6251DA;
+    border: 4px solid #01bf86;
     border-radius: 10px;
     content: "";
     display: inline-block;
@@ -89,7 +89,7 @@ h1.section-title::after {
 }
 
 .btn.btn-default {
-    background-color: #6251DA;
+    background-color: #01bf86;
     border-color: transparent;
     border-radius: 30px;
     color: #fff;
@@ -223,18 +223,18 @@ header{
 .default-menu.navbar-default .navbar-nav > li > a:active, 
 .default-menu.navbar-default .navbar-nav > li > a:focus, 
 .default-menu.navbar-default .navbar-nav > li > a:hover{
-    color: #6251DA;
+    color: #01bf86;
 }
 
 .default-menu.navbar-default .navbar-nav > .active > a, 
 .default-menu.navbar-default .navbar-nav > .active > a:focus, 
 .default-menu.navbar-default .navbar-nav > .active > a:hover{
     background-color: transparent;
-    color: #6251DA;
+    color: #01bf86;
 }
 
 .btn.btn-default.navbar-btn {
-    background-color: #6251DA;
+    background-color: #01bf86;
     border-radius: 4px;
     color: #ffffff;
     font-weight: 600;
@@ -244,7 +244,7 @@ header{
 
 .btn.btn-default.navbar-btn:hover{
     color: #fff;
-    background-color: #6251DA;
+    background-color: #01bf86;
     border-color: transparent;
 }
     
@@ -350,8 +350,8 @@ header{
 }
 
 .intro .carousel-indicators li {
-    background-color: #6251DA;
-    border: 2px solid #6251DA;
+    background-color: #01bf86;
+    border: 2px solid #01bf86;
     height: 15px;
     width: 15px;
     margin: 4px;
@@ -435,7 +435,7 @@ header{
 }
     
 .service .media-left .lnr {
-    color: #6251DA !important;
+    color: #01bf86 !important;
     font-size: 25px;
 }
 
@@ -448,7 +448,7 @@ header{
 
 /*===== about us ====*/
 .about-us{
-    background-color: #F3F6FA;
+    background-color: #6251da;/*#F3F6FA*/
     padding-bottom: 50px;
 }
 
@@ -458,11 +458,11 @@ header{
 }
 
 .default-bg{
-    background-color: #6251DA;
+    background-color: #6251da;/*#01bf86*/
 }
 
 .about-content > p{
-    color: #707070;
+    color: #FFFFFF;/*#707070*/
     font-size: 16px;
     margin-bottom: 35px;
     line-height: 1.7;
@@ -487,7 +487,7 @@ header{
 }
 
 .owl-theme .owl-controls .owl-page span {
-    background: #6251DA;
+    background: #01bf86;
     opacity: 0.3;
     border-radius: 0;
     height: 4px;
@@ -529,7 +529,7 @@ header{
 }
 
 .service-overflow h3{
-    color: #6251DA;
+    color: #01bf86;
     margin-top: 0;
 }
 
@@ -573,7 +573,7 @@ header{
 }
 
 .extra-feature .section-title > span{
-    color: #6251DA;
+    color: #01bf86;
 }
 
 .extra-feature p{; 
@@ -613,7 +613,7 @@ header{
 }
 
 .platform i {
-    color: #6251DA;
+    color: #01bf86;
     background: transparent;
     cursor: pointer;
     font-size: 31px;
@@ -720,7 +720,7 @@ strong.expert-tag{
 }
 
 .talk-about-us strong{
-    color: #6251DA; 
+    color: #01bf86; 
     font-weight: 600;
     font-style: italic;
 }
@@ -757,7 +757,7 @@ strong.expert-tag{
 }
 
 .talk-about-us .carousel-indicators li.active {
-    background-color: #6251DA;
+    background-color: #01bf86;
 }
 
 .talk-about-us .carousel-indicators {
@@ -766,7 +766,7 @@ strong.expert-tag{
 
 /*===== our client ====*/
 .support{
-    background: #6251DA;
+    background: #01bf86;
     padding: 40px 0;
 }
 
@@ -847,13 +847,13 @@ strong.expert-tag{
 }
 
 .social-links .fa {
-    color: #6251DA ;
+    color: #01bf86 ;
     cursor: pointer;
     height: 40px;
     padding-top: 13px;
     text-align: center;
     width: 40px;
-    border: 1px solid #6251DA ;
+    border: 1px solid #01bf86 ;
 }
 
 .social-links .fa:hover{
@@ -865,7 +865,7 @@ strong.expert-tag{
 /*===== footer ====*/
 .footer_bottom {
     padding: 2em 0;
-    background: #6251DA;
+    background: #6251da;
 }
 .copy {
     text-align: center;
@@ -879,7 +879,7 @@ strong.expert-tag{
     border-bottom: 1px dotted;
 }
 .copy p a:hover {
-    color: #e5e52d;
+    color: #01bf86;
     border-bottom: 1px solid;
     text-decoration: none;
 }
@@ -901,6 +901,10 @@ strong.expert-tag{
 }
 a.social-icon:hover, a.social-icon:active, a.social-icon:focus {
     text-decoration: none;
-    color: #e5e52d;
-    border-color: #e5e52d;
+    color: #01bf86;
+    border-color: #01bf86;
+}
+
+.modal-title, h3 {
+    color: #000000;
 }
