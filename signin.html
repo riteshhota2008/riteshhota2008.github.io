@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<script src="/BookSummary/scripts/jquery-3.1.0.js"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
+    <!-- Book Preview -->
+    <link rel="stylesheet" type="text/css" href="BookPreview/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="BookPreview/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="BookPreview/css/bookblock.css"/>
+    <link rel="stylesheet" type="text/css" href="BookPreview/css/component.css"/>
+    <script src="BookPreview/js/modernizr.custom.js"></script>
+    <!-- Book Peview End -->
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <style>
+        h1, h2, h3, h4, h5, h6, p, a, li, ul, label, input, span {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    </style>
+
+    <script>
+
+        function processCategories(categoriesData) {
+            for (var i = 0; i < categoriesData.categoryList.length; i++) {
+                processSingleCategory(categoriesData.categoryList[i].categoryName, categoriesData.categoryList[i].subCategoryList);
+            }
+        }
+
+        function processSingleCategory(categoryName, subCategoryList) {
+            for (var i = 0; i < subCategoryList.length; i++) {
+                // add the code to create a UI component to display category and its sub-categories.
+                // As of now we are adding one button for each sub -category.
+                var t1 = '<button class="w3-btn w3-white w3-border w3-round subCatBtn">';
+                var t2 = subCategoryList[i];
+                var t3 = "</button>";
+                $("#subCategories").append(t1 + t2 + t3);
+            }
+
+
+        }
+
+        $(document).ready(function () {
+
+// load config data for a book , let us use synch call
+            $.ajaxSetup({
+                async: false
+            });
+
+            $.getJSON("/BookSummary/json/categories/categories.json", processCategories);
+
+            $.ajaxSetup({
+                async: true
+            });
+
+            $(".subCatBtn").click(function () {
+                //alert($(this).text());
+                loadSubCategoryMetaData($(this).text());
+            });
+
+        });
+
+
+        function loadSubCategoryMetaData(subCategoryName) {
+            // load and process the subCategory json if not done so
+            if ($("." + subCategoryName).length === 0) {
+                //alert("Loading Category "+subCategoryName);
+                $.getJSON("/BookSummary/json/categories/" + subCategoryName + ".json", loadResources);
+            } else {
+                //alert("Category allready loaded "+subCategoryName);
+            }
+        }
+
+
+        function loadResources(resData) {
+            // alert(resData.viewList.length);
+            // we have to clear the testContainer
+            // need to check if bundles are allready loaded skip the same
+            //$(testContainer).empty();
+            for (var i = 0; i < resData.viewList.length; i++) {
+                //alert(resData.viewList[i].tagLine);
+                //alert(resData.viewList[i].bundleID);
+                createAccordian(resData.viewList[i].tagLine, resData.viewList[i].bundleID, resData.subCategory, resData.viewList[i].displayTag);
+            }
+        }
+
+        function createAccordian(tagName, bundleID, subCategory, dispTitle) {
+// load data only once
+// if($("#"+bundleID).length ===0) { }
+            var e1 = '<div class="w3-accordion">';
+            var e2 = '<button onclick="accordBundle(';
+            var e3 = "'" + bundleID + "'";
+            var e4 = ')" class="w3-btn-block w3-left-align w3-white w3-border w3-border-blue w3-round ' + subCategory + '">';
+            var e5 = subCategory + "|" + dispTitle;
+            var e6 = '</button>';
+            var e7 = '<div id="';
+            var e8 = bundleID;
+            var e9 = '" class="w3-accordion-content w3-container"> </div> </div>';
+            $("#contentContainer").append(e1 + e2 + e3 + e4 + e5 + e6 + e7 + e8 + e9);
+        }
+
+    </script>
+
+</head>
+
+<style>
+
+    .clear {
+        clear: both;
+    }
+
+    div.w3-accordion {
+        margin: 10px;
+        padding: 5px;
+        width: 80%;
+    }
+
+    button.subCatBtn {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    div#header {
+        background-color: lightyellow;
+        height: 100px;
+    }
+
+    div#footer {
+        background-color: lightblue;
+        height: 100px;
+    }
+
+    div#categoryDeck {
+        width: 270px;
+        height: 240px;
+        border: 1px solid blue;
+        margin: 5px;
+        float: left;
+    }
+
+    div.deck {
+        width: 270px;
+        height: 240px;
+        border: 1px solid blue;
+        margin: 5px;
+        float: left;
+    }
+
+    div.titleImage {
+        width: 100%;
+        height: 60%;
+    }
+
+    div.titleImage img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+</style>
+
+<body style="background-color: #f9f9f9">
+
+<div class="wrapper">
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+        <div class="top-bar">
+            <div class="container">
+                <ul class="social-icons col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                    <li><a href="data/311/OneView.html"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="row-end"><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul><!--//social-icons-->
+            </div>
+        </div><!--//to-bar-->
+        <div class="container" style="margin-top: 10px;padding-bottom: 10px">
+            <h1 class="logo pull-left">
+                <a href="index.html">
+                    <span class="logo-title" style="color:#64696a;">GCCJL KNOWLEDGE STACK</span>
+                </a>
+            </h1><!--//logo-->
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="#">About Us</a></li>
+                        <li class="nav-item"><a href="#">Contact Us</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div><!--//container-->
+    </header><!--//header-->
+</div>
+
+<!-- Sign In -->
+<div class="less-container" style="margin-top: 50px">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="box-material">
+                <h1>Sign in to continue</h1>
+                <form method="post" action="">
+                    <label>Username</label>
+                    <input type="email" class="form-control" name="username" title="Username" required/><br>
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" title="Password" required/><br>
+                    <a href="#"><h6 style="float: right;color: #484848">Forgot Password?</h6></a>
+                    <br><br>
+                    <Button type="submit" class="btn btn-cta btn-cta-primary" name="submit"
+                            onclick="window.location.href= 'profile.html'">Sign in
+                    </Button>
+                    <a href="data/311/OneView.html" style="margin-left: 10px">
+                        <button type="button" class="btn btn-cta btn-cta-primary"
+                                style="background-color: transparent;color: #6b15a1">Cancel
+                        </button>
+                    </a>
+                </form>
+                <br>
+                <label style="color: #484848">Don't have an account, <a href="signup.html" style="color: #6b15a1">click
+                    here</a>
+                    to register.
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ******FOOTER****** -->
+<footer class="footer" style="margin-top: 50px">
+    <div class="bottom-bar">
+        <div class="less-container">
+            <div class="row">
+                <small class="copyright col-md-6 col-sm-6 col-xs-12" style="font-size: 16px">Copyright @ 2016 GCCJL
+                    KNOWLEDGE STACK
+                </small>
+                <ul class="social col-md-6 col-sm-6 col-xs-12 list-inline">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="last"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul><!--//social-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </div><!--//bottom-bar-->
+</footer><!--//footer-->
+
+<script>
+    function myFunction(id) {
+
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+
+    }
+
+
+    function accordBundle(id) {
+
+        // avoid loading data if it is present in dom
+        var idLoaded = $("#" + id).attr("loaded");
+
+        //alert(idLoaded);
+
+        if (idLoaded !== "yes") {
+            accordianDataLoad(id);
+            $("#" + id).attr("loaded", "yes");
+        }
+
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+
+    }
+
+    function accordianDataLoad(id) {
+// alert("Accordian DataLoad"+id);
+        // load the json for bundleID and populate the content for accordian
+        $.getJSON("/BookSummary/json/categories/" + id + ".json", loadBundleData);
+    }
+
+    function loadBundleData(bundleData) {
+        for (var i = 0; i < bundleData.data.length; i++) {
+            displayBundleData(bundleData.data[i].resURL, bundleData.data[i].imageLoc, bundleData.data[i].title, bundleData.data[i].rank, bundleData.bundleID);
+        }
+
+    }
+
+    function displayBundleData(url, imageLoc, title, rank, bundleID) {
+//alert("BundleID" + bundleID)
+        t1 = '<div class="w3-card w3-hover-shadow deck">';
+        t2 = '<div class="titleImage"><img src="' + imageLoc + '"> </div>';
+        t3 = '<a href="' + url + '">';
+        t4 = '<div class="relevance">Score <span class="w3-badge">' + rank + '</span>Read ...</div>';
+        t5 = '<div class="titleText" >' + title + '</div>';
+        t6 = '</a></div>';
+        $("#" + bundleID).append(t1 + t2 + t3 + t4 + t5 + t6);
+    }
+
+    loadSubCategoryMetaData("mostPopular");
+</script>
+
+<!-- Book Preview -->
+<script src="BookPreview/js/bookblock.min.js"></script>
+<script src="BookPreview/js/classie.js"></script>
+<script src="BookPreview/js/bookshelf.js"></script>
+<!-- Book Preview End -->
+
+<script>
+    //new accordion
+    //uses classList, setAttribute, and querySelectorAll
+    //if you want this to work in IE8/9 youll need to polyfill these
+    (function () {
+        var d = document,
+                accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+                setAria,
+                setAccordionAria,
+                switchAccordion,
+                touchSupported = ('ontouchstart' in window),
+                pointerSupported = ('pointerdown' in window);
+
+        skipClickDelay = function (e) {
+            e.preventDefault();
+            e.target.click();
+        }
+
+        setAriaAttr = function (el, ariaType, newProperty) {
+            el.setAttribute(ariaType, newProperty);
+        };
+        setAccordionAria = function (el1, el2, expanded) {
+            switch (expanded) {
+                case "true":
+                    setAriaAttr(el1, 'aria-expanded', 'true');
+                    setAriaAttr(el2, 'aria-hidden', 'false');
+                    break;
+                case "false":
+                    setAriaAttr(el1, 'aria-expanded', 'false');
+                    setAriaAttr(el2, 'aria-hidden', 'true');
+                    break;
+                default:
+                    break;
+            }
+        };
+//function
+        switchAccordion = function (e) {
+            console.log("triggered");
+            e.preventDefault();
+            var thisAnswer = e.target.parentNode.nextElementSibling;
+            var thisQuestion = e.target;
+            if (thisAnswer.classList.contains('is-collapsed')) {
+                setAccordionAria(thisQuestion, thisAnswer, 'true');
+            } else {
+                setAccordionAria(thisQuestion, thisAnswer, 'false');
+            }
+            thisQuestion.classList.toggle('is-collapsed');
+            thisQuestion.classList.toggle('is-expanded');
+            thisAnswer.classList.toggle('is-collapsed');
+            thisAnswer.classList.toggle('is-expanded');
+
+            thisAnswer.classList.toggle('animateIn');
+        };
+        for (var i = 0, len = accordionToggles.length; i < len; i++) {
+            if (touchSupported) {
+                accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+            }
+            if (pointerSupported) {
+                accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+            }
+            accordionToggles[i].addEventListener('click', switchAccordion, false);
+        }
+    })();
+</script>
+
+<script type="text/javascript" src="scripts/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+
+<script>
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+    });
+</script>
+
+<script>
+    $('.awNotices').append('<span class="controller fa fa-pause"></span>');
+    $('.awNotices a:nth-of-type(1)').addClass('active');
+
+    function awNotice() {
+        if (!$('.awNotices').hasClass('stopped')) {
+            var $active = $('.awNotices a.active');
+            var $next = $active.next('a');
+
+            if ($next.length) {
+                $next.addClass('active');
+                $active.removeClass('active');
+            } else {
+                $active.removeClass('active');
+                $('.awNotices a:first-of-type').addClass('active');
+            }
+        }
+    }
+
+    $('.awNotices .controller').click(function () {
+        $(this).toggleClass('fa-pause fa-play');
+        $('.awNotices').toggleClass('stopped');
+    })
+
+    function awNotices(timer) {
+        setInterval("awNotice()", timer);
+    }
+
+    awNotices(4500);
+
+</script>
+
+</body>
+</html>

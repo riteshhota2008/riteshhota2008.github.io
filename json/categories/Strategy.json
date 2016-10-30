@@ -1,0 +1,17 @@
+{ "subCategory":"Strategy",
+
+"viewList":[
+
+          {
+               "tagLine":"BestSeller",
+	        "displayTag":"Best Seller", 
+	       "bundleID":"bundle01"
+          },
+       
+           {
+              "tagLine":"NewReleases",
+	      "displayTag":"New Releases", 
+	      "bundleID":"bundle02"
+           }
+
+] }

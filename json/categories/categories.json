@@ -1,0 +1,7 @@
+{ 
+  "categoryList" : [
+   {  "categoryName" : "Business", "subCategoryList" : ["Strategy"] },
+   {  "categoryName" : "Self-Help", "subCategoryList" : ["Motivation"] },
+   {  "categoryName" : "Default", "subCategoryList" : ["mostPopular","neuroscience"] }
+   ]
+}

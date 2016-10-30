@@ -1,0 +1,17 @@
+{ "subCategory":"neuroscience",
+
+"viewList":[
+
+          {
+               "tagLine":"BestSeller",
+	        "displayTag":"Best Seller", 
+	       "bundleID":"bundle03"
+          },
+       
+           {
+              "tagLine":"NewReleases",
+	      "displayTag":"New Releases", 
+	      "bundleID":"bundle04"
+           }
+
+] }
