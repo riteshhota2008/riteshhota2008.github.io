@@ -551,7 +551,7 @@ img {
 .awNotices {
     position: relative;
     color: white;
-    font: 400 12px Arial;
+    font-family: 'Source Sans Pro', sans-serif;/*font: 400 12px Arial;*/
 }
 
 .awNotices a {
