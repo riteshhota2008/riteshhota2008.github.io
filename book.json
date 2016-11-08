@@ -1,9 +1,0 @@
-{
-    "popularBooks":"json/categories/mostPopular.json",
-    "categories":"json/categories/categories.json",
-    "jsonCatData":"json/categories",
-    "format":".json",
-    "imageData":"images",
-    "content":"data",
-    "appContext":"BookSummary"
-}
