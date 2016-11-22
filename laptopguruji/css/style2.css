@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 hr {
@@ -104,7 +104,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 p {
@@ -136,40 +136,46 @@ p {
 
 
 .bg-primary-homepage {
-    background-color: #2C74BA;      /* This is the homepage section to chnage for tabs orange colour of #f05f40 */      
+    background-color: #e3e3e3;      /* This is the homepage section to chnage for tabs orange colour of #f05f40 */
 }                                   /* Changing the colour from #f05f40 dat is orange to #f4a460 black */
                                     /* Changed .bg-primary to .bg-primary-homepage to make all tabs black-white in only homepage 
                                     previous one #9ACD32 a new one to try #4C9900 latest #B2B200 */
+                                    /* #2C74BA */
 
 .bg-primary-processor {
-    background-color: #00B259;       /* This is the processor section to change for tabs orange colour of #f0540 */
+    background-color: #e3e3e3;       /* This is the processor section to change for tabs orange colour of #f0540 */
 }                                    /* Changing the colour from #f05f40 dat is orange to #5F9EA0 which is cadetblue */
                                      /* remove .bg-primary-processor to make it like the previous one as orange #6a5acd */
+                                        /* #00B259 */
 
 
 .bg-primary-gpu {                    /* This is the gpu section to change for tabs orange colour of #f0540 */ 
-    background-color: #b22222;       /* Changing the colour from #f05f40 dat is orange to #cc0000 which is red */
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #cc0000 which is red */
                                      /* remove .bg-primary-gpu to make it like the previous one as orange */
+                                        /* #b22222 */
 }
 
 
 .bg-primary-ram {                    /* This is the ram section to change for tabs orange colour of #f0540 */
-    background-color: #00b200;       /* Changing the colour from #f05f40 dat is orange to #00b200 which is green */
-                                     /* remove .bg-primary-ram to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #00b200 which is green */
+                                     /* remove .bg-primary-ram to make it like the previous one as orange */
+                                    /* #00b200 */
 
 }
 
 
 .bg-primary-display {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
-    background-color: #545454;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
-                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */
+                                        /* #545454 */
 
 }
 
 
 .bg-primary-storage {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
-    background-color: #ccac00;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
-                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */
+                                    /* #ccac00 */
 
 }
 
@@ -215,7 +221,7 @@ aside {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; /* to change the title bar color and background color */
+    font-family: 'Source Sans Pro', sans-serif; /* to change the title bar color and background color */
     background-color: #fff;                                     /* change background-color: #fff to #000000 */
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -228,7 +234,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/
+    font-family: 'Source Sans Pro', sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/
     font-weight: 700;                /* If we change this css den the title of phone color changes to green for every page*/
     color: #4C9900;
 }
@@ -628,7 +634,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -758,9 +764,9 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary-homepage {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #2C74BA;                      /* border color and background color was changed to #f4a460 from # f05f40  latest #4C9900 */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 from # f05f40  latest #4C9900 */
     color: #fff;
-    background-color: #2C74BA;
+    background-color: #00B259;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -778,9 +784,9 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary-storage {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #ccac00;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #ccac00 */
     color: #fff;
-    background-color: #ccac00;
+    background-color: #00B259;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -788,7 +794,7 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary-gpu {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #b22222;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    border-color: #b22222;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #b22222 */
     color: #fff;
     background-color: #b22222;
     -webkit-transition: all .35s;
@@ -798,18 +804,18 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary-ram {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #00b200;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #00b200 */
     color: #fff;
-    background-color: #00b200;
+    background-color: #00B259;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
 .btn-primary-display {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #545454;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #545454*/
     color: #fff;
-    background-color: #545454;
+    background-color: #00B259;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -835,9 +841,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary-homepage:active,
 .btn-primary-homepage.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #1C4A77;
+    border-color: #008040;
     color: #fff;
-    background-color: #1C4A77;
+    background-color: #008040;
 }
 
 
@@ -859,9 +865,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary-storage:active,
 .btn-primary-storage.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #b29600;
+    border-color: #008040;
     color: #fff;
-    background-color: #b29600;
+    background-color: #008040;
 }
 
 
@@ -871,9 +877,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary-gpu:active,
 .btn-primary-gpu.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #8e1b1b;
+    border-color: #008040;
     color: #fff;
-    background-color: #8e1b1b;
+    background-color: #008040;
 }
 
 
@@ -883,9 +889,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary-ram:active,
 .btn-primary-ram.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #007f00;
+    border-color: #008040;
     color: #fff;
-    background-color: #007f00;
+    background-color: #008040;
 }
 
 
@@ -895,9 +901,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary-display:active,
 .btn-primary-display.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #2a2a2a;
+    border-color: #008040;
     color: #fff;
-    background-color: #2a2a2a;
+    background-color: #008040;
 }
 
 
@@ -940,7 +946,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
 }
 

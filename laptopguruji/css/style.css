@@ -142,34 +142,39 @@ p {
                                     previous one #9ACD32 a new one to try #4C9900 latest #B2B200 --- #2C74BA ----*/
 
 .bg-primary-processor {
-    background-color: #00B259;       /* This is the processor section to change for tabs orange colour of #f0540 */
+    background-color: #e3e3e3;       /* This is the processor section to change for tabs orange colour of #f0540 */
 }                                    /* Changing the colour from #f05f40 dat is orange to #5F9EA0 which is cadetblue */
                                      /* remove .bg-primary-processor to make it like the previous one as orange #6a5acd */
+                                    /*  #00B259 */
 
 
 .bg-primary-gpu {                    /* This is the gpu section to change for tabs orange colour of #f0540 */ 
-    background-color: #b22222;       /* Changing the colour from #f05f40 dat is orange to #cc0000 which is red */
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #cc0000 which is red */
                                      /* remove .bg-primary-gpu to make it like the previous one as orange */
+                                        /* #b22222 */
 }
 
 
 .bg-primary-ram {                    /* This is the ram section to change for tabs orange colour of #f0540 */
-    background-color: #00b200;       /* Changing the colour from #f05f40 dat is orange to #00b200 which is green */
-                                     /* remove .bg-primary-ram to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #00b200 which is green */
+                                     /* remove .bg-primary-ram to make it like the previous one as orange */
+                                    /* #00b200 */
 
 }
 
 
 .bg-primary-display {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
-    background-color: #545454;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
-                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */
+                                    /* #545454 */
 
 }
 
 
 .bg-primary-storage {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
-    background-color: #ccac00;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
-                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */
+                                    /* #ccac00 */
 
 }
 
