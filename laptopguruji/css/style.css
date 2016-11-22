@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 hr {
@@ -104,7 +104,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 p {
@@ -136,10 +136,10 @@ p {
 
 
 .bg-primary-homepage {
-    background-color: #2C74BA;      /* This is the homepage section to chnage for tabs orange colour of #f05f40 */      
+    background-color: #e3e3e3;      /* This is the homepage section to chnage for tabs orange colour of #f05f40 */
 }                                   /* Changing the colour from #f05f40 dat is orange to #f4a460 black */
                                     /* Changed .bg-primary to .bg-primary-homepage to make all tabs black-white in only homepage 
-                                    previous one #9ACD32 a new one to try #4C9900 latest #B2B200 */
+                                    previous one #9ACD32 a new one to try #4C9900 latest #B2B200 --- #2C74BA ----*/
 
 .bg-primary-processor {
     background-color: #00B259;       /* This is the processor section to change for tabs orange colour of #f0540 */
@@ -215,7 +215,7 @@ aside {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; /* to change the title bar color and background color */
+    font-family: 'Source Sans Pro', sans-serif; /* to change the title bar color and background color */
     background-color: #fff;                                     /* change background-color: #fff to #000000 */
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -228,7 +228,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/
+    font-family: 'Source Sans Pro', sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/
     font-weight: 700;                /* If we change this css den the title of phone color changes to green for every page*/
     color: #4C9900;
 }
@@ -265,7 +265,7 @@ aside {
 
 /* experimenting started */
 
-
+/*
 .developed {
 
     background-image: url(../img/picjumbo.com_HNCK4011.jpg); 
@@ -273,13 +273,12 @@ aside {
     width: 100%;
     min-height: auto;
     text-align: center;
-    /* color: #fff;  */                     /*background-image:url(../img/header.jpg)toWebsiteImages/background-processor.jpg */
-    background-position: center;                              /* background-image: url(../WebsiteImages/../img/header.jpg) */
+    /* color: #fff;  */
+/*    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;     /* ..............added to chnge the footer image ............*/
-
+    -o-background-size: cover;
 
 }
 
@@ -356,7 +355,7 @@ aside {
 }
 
 
-
+*/
 
 /* experimenting ended */
 
@@ -540,7 +539,6 @@ header .header-content .header-content-inner hr {
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
-    font-weight: 300;
     color: rgba(255,255,255,.7);
 }
 
@@ -629,7 +627,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -670,18 +668,18 @@ header .header-content .header-content-inner p {
 }
 
 .btn-default {
-    border-color: #fff;          /* This is the default css to make changes on learn more href */
+    border-color: #ffffff;          /* This is the default css to make changes on learn more href ---- fff -----*/
     color: #222;                  
-    background-color: #fff;
+    background-color: #ffffff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
 .btn-default-black {               /* created this new css for those learn more href whose background is white */
-    border-color: #2C74BA;          /* again changed the background color and border color of learn more according to #f4a460 respective hompage color  */
-    color: #fff;                    /* bg-color; #4c9900 and border-color */
-    background-color: #2C74BA;
+    border-color: #333;          /* again changed the background color and border color of learn more according to #f4a460 respective hompage color  */
+    color: #fff;                    /* bg-color; #4c9900 and border-color ----- #2C74BA ----- */
+    background-color: #333;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -694,9 +692,9 @@ header .header-content .header-content-inner p {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    border-color: #cccccc;
+    border-color: #f2f2f2;
     color: #222;
-    background-color: #cccccc;
+    background-color: #fffff1;
 }
 
 
@@ -706,9 +704,9 @@ header .header-content .header-content-inner p {
 .btn-default-black:active,
 .btn-default-black.active {
 
-    border-color: #1C4A77;
+    border-color: #000000;
     color: #fff;
-    background-color: #1C4A77;                  /* made this new css so that learn more black background stays white #db9356 */
+    background-color: #000000;                  /* made this new css so that learn more black background stays white #db9356 */
                                                /* when we hover the learn more the background color changes in homepage */
 }                                              /* border-color , bg-color; #3c7a00 */ 
 
@@ -946,7 +944,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
 }
 
