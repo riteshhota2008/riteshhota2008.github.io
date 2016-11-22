@@ -1,0 +1,975 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+}
+
+hr {
+    max-width: 50px;
+    border-color: #000000;  /* make changes previously border-color: #f05f40 now #000000 */
+    border-width: 3px;
+}
+
+hr.light {
+    border-color: #fff;
+}
+
+hr.main {
+    max-width: 50px;
+    /*border-color: #f05f40;*/  /* made this hr.main to change the black colour heading of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+}
+
+
+hr.main-homepage {
+    max-width: 50px;
+    border-color: transparent;  /*hr.main-homepage to change latest #f4a460the black colour heading of each to orange changes (#f05f40 now #000000)#4c9900 */
+    border-width: 3px;      /* #2C74BA */
+
+}
+
+
+hr.main-processor {
+    max-width: 50px;
+    border-color: #00B259;  /* made this hr.main-processor to change the black colour heading latest #5f9ea0 of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+
+}
+
+
+hr.main-storage {
+    max-width: 50px;
+    border-color: #ccac00;  /* made this hr.main-storage to change the black colour heading of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+
+}
+
+
+hr.main-gpu {
+    max-width: 50px;
+    border-color: #b22222;  /* made this hr.main-gpu to change the black colour heading of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+
+}
+
+
+hr.main-ram {
+    max-width: 50px;
+    border-color: #00b200;  /* made this hr.main-ram to change the black colour heading of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+
+}
+
+
+hr.main-display {
+    max-width: 50px;
+    border-color: #545454;  /* made this hr.main-display to change the black colour heading of each to orange changes (#f05f40 now #000000) */
+    border-width: 3px;
+
+}
+
+
+
+a {
+    color: #000000;  /* made #f05f40 to #000000 so orange link becomes black */
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    outline: 0;
+}
+/*Viewport alternative for Windows Phones*/
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+/*End Viewport*/
+a:hover,
+a:focus {
+    color: #eb3812;
+    outline: 0;
+}
+a:focus, *:focus {
+    noFocusLine: expression(this.onFocus=this.blur());
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+
+
+
+
+
+
+.heading-black {       /* creating p class = heading.black to make heading color black  */
+
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+
+
+
+
+
+
+.bg-primary-homepage {
+    background-color: #2C74BA;      /* This is the homepage section to chnage for tabs orange colour of #f05f40 */      
+}                                   /* Changing the colour from #f05f40 dat is orange to #f4a460 black */
+                                    /* Changed .bg-primary to .bg-primary-homepage to make all tabs black-white in only homepage 
+                                    previous one #9ACD32 a new one to try #4C9900 latest #B2B200 */
+
+.bg-primary-processor {
+    background-color: #00B259;       /* This is the processor section to change for tabs orange colour of #f0540 */
+}                                    /* Changing the colour from #f05f40 dat is orange to #5F9EA0 which is cadetblue */
+                                     /* remove .bg-primary-processor to make it like the previous one as orange #6a5acd */
+
+
+.bg-primary-gpu {                    /* This is the gpu section to change for tabs orange colour of #f0540 */ 
+    background-color: #b22222;       /* Changing the colour from #f05f40 dat is orange to #cc0000 which is red */
+                                     /* remove .bg-primary-gpu to make it like the previous one as orange */
+}
+
+
+.bg-primary-ram {                    /* This is the ram section to change for tabs orange colour of #f0540 */
+    background-color: #00b200;       /* Changing the colour from #f05f40 dat is orange to #00b200 which is green */
+                                     /* remove .bg-primary-ram to make it like the previous one as orange */ 
+
+}
+
+
+.bg-primary-display {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
+    background-color: #545454;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+
+}
+
+
+.bg-primary-storage {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
+    background-color: #ccac00;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+                                     /* remove .bg-primary-display to make it like the previous one as orange */ 
+
+}
+
+
+.bg-dark {
+    color: #fff;
+    background-color: #222;
+}
+
+.text-faded {
+    color: rgba(255,255,255,.7);     /* changing text faded to pure white so text shouldnt blend wid the background rgba(255,255,255,.7) to #ffffff */
+}
+
+
+.text-faded-white {
+    color: #ffffff;     /* created this new css to make text faded pure white so that it shouldnt blend with the background color */
+}
+
+
+
+.text-faded-white-underline {
+    color: #ffffff;
+    text-decoration: underline;     /* created this new css to make text faded pure white so that it shouldnt blend with the background color */
+}
+
+
+
+section {
+    padding: 100px 0;
+}
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+
+
+
+.navbar-default {
+    border-color: rgba(34,34,34,.05);
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; /* to change the title bar color and background color */
+    background-color: #fff;                                     /* change background-color: #fff to #000000 */
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+
+
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/
+    font-weight: 700;                /* If we change this css den the title of phone color changes to green for every page*/
+    color: #4C9900;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {  /* 2 - changing color from #eb3812 to #3c7a00 */
+    color: #2d5b00;                                   /* change this the title everypage of phone color changes when we hover on it to dark green  */
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {                /* 3 - changing color from #222 to #4c9900 */
+    text-transform: uppercase;                   /* Changed the navbar details about processor n storage to dark green */
+    font-size: 13px;
+    font-weight: 700;
+    color: #4c9900;
+}
+
+.navbar-default .nav > li>a:hover,              /* 4 - changing the color from #f05f40 */
+.navbar-default .nav>li>a:focus:hover {         /* Changed the navbar details about processor n storage when hover to dark green */
+    color: #2d5b00;
+}
+
+.navbar-default .nav > li.active>a,            /* 5 - changing the color from #f05f40 to #4C9900 */
+.navbar-default .nav>li.active>a:focus {       /* background-color: transparent to #4c9900  */
+    color: #4C9900!important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+
+/* experimenting started */
+
+
+.developed {
+
+    background-image: url(../img/picjumbo.com_HNCK4011.jpg); 
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    /* color: #fff;  */                     /*background-image:url(../img/header.jpg)toWebsiteImages/background-processor.jpg */
+    background-position: center;                              /* background-image: url(../WebsiteImages/../img/header.jpg) */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;     /* ..............added to chnge the footer image ............*/
+
+
+}
+
+
+
+.teamimage{
+    border: 5px #57bff8 solid;
+}
+
+
+.teamdiv{
+    border: 5px #3ca68c solid;
+    background-color: rgba(255,255,255,1);
+    color: black;
+}
+
+
+#team a.icoFacebook, #team a.icoGoogle, #team a.icoTwitter{
+    background-color: #3ca68c;
+}
+
+#team a.icoFacebook:hover {
+    background-color:#3B5998;
+}
+
+#team a.icoGoogle:hover {
+    background-color:#d34836;
+}
+
+#team a.icoTwitter:hover {
+    background-color:#4099FF;
+}
+
+#team a.icoFacebook i, #team a.icoGoogle i, #team a.icoTwitter i{
+    color: #fff;
+}
+
+.social-circle li a {
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 40px;
+    height: 40px;
+    font-size:18px;
+}
+.social-circle li i {
+    margin:0;
+    line-height:40px;
+    text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+
+
+
+/* experimenting ended */
+
+
+
+
+
+
+
+
+/*
+
+.navbar-default-processor {
+    border-color: rgba(34,34,34,.05);
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;       /* to change the title bar color and background color     */          /*
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+
+.navbar-default-processor .navbar-header-processor .navbar-brand-processor {
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;   /* 1 - Changing the color of navbar from orange #f05f40 to green ......*/   /*
+    font-weight: 700;                /* If we change this css den the title of phone color changes to green for every page  */        /*
+    color: #6A5ACD;
+}
+
+.navbar-default-processor .navbar-header-processor .navbar-brand-processor:hover,
+.navbar-default-processor .navbar-header-processor .navbar-brand-processor:focus {  /* 2 - changing color from #eb3812 to #3c7a00 */   /*
+    color: #5448a4;                                   /* change this the title everypage of phone color changes when we hover on it to dark green */ /*
+}
+
+.navbar-default-processor .nav-processor > li>a,
+.navbar-default-processor .nav-processor>li>a:focus {                /* 3 - changing color from #222 to #4c9900 */     /*
+    text-transform: uppercase;                   /* Changed the navbar details about processor n storage to dark green */   /*
+    font-size: 13px;
+    font-weight: 700;
+    color: #6A5ACD;
+}
+
+.navbar-default-processor .nav-processor > li>a:hover,              /* 4 - changing the color from #f05f40 */   /*
+.navbar-default-processor .nav>li>a:focus:hover {         /* Changed the navbar details about processor n storage when hover to dark green */   /*
+    color: #5448a4;
+}
+
+.navbar-default-processor .nav-processor > li.active>a,            /* 5 - changing the color from #f05f40 to #4C9900 */    /*
+.navbar-default-processor .nav>li.active>a:focus {       /* background-color: transparent to #4c9900  */     /*
+    color: #6A5ACD!important;
+    background-color: transparent;
+}
+
+.navbar-default-processor .nav-processor > li.active>a:hover,
+.navbar-default-processor .nav-processor>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+                                                                         cancelled it completely for processor part */
+
+
+
+
+
+@media(min-width:768px) {
+    .navbar-default {
+        border-color: rgba(255,255,255,.3);
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {   
+        color: #fff;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {   /* changing color: #f05f40 to #4C9900 so lappy guide tittle becomes greem */
+        font-size: 14px;
+        color: #4C9900;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #eb3812;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #222;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {   /* changing color: #f05f40 to #4C9900 so when hover on processor n storage in destop turn green*/
+        color: #4C9900;
+    }
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;          /* changing color from white #fff to black #000000 for different background  */
+    text-align: center;     
+    color: #fff;
+    background-image: url(../img/Enter-Snap.JPG);/*background-image:url(../img/header.jpg)toWebsiteImages/background-processor.jpg */
+    background-position: center;                              /* background-image: url(../WebsiteImages/../img/header.jpg) */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;       /* background-image: url(../img/Enter-Snap.JPG); */
+    background-size: cover;
+    -o-background-size: cover;
+}
+#header-link{
+    position: absolute; 
+        top: 175px; 
+        left: 630px; 
+        width: 132px; 
+        height: 50px; 
+        background-color: transparent;
+        outline: 0; /*Change it to CadetBlue or some other color for checking. Also, not sure if ubiquitous*/
+        }
+        #home-link{
+    position: absolute; 
+        top: 210px; 
+        left: 1050px; 
+        width: 132px; 
+        height: 50px; 
+        background-color: transparent; 
+        outline: 0;
+        }
+       #shift-link{
+    position: absolute; 
+        top: 200px; 
+        left: 270px; 
+        width: 132px; 
+        height: 50px; 
+        background-color: transparent; 
+        outline: 0;
+        }
+
+
+
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+    padding-top: 100px;
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+.section-heading {
+    margin-top: 0;
+}
+
+.section-heading-white {  
+    color: #ffffff;      /* creating this new css to make text white of those things which got invisible due to black background */
+
+}
+
+.service-box {
+    margin: 50px auto 0;
+    max-width: 400px;
+}
+
+@media(min-width:992px) {
+    .service-box {
+        margin: 20px auto 0;
+    }
+}
+
+.service-box p {
+    margin-bottom: 0;
+}
+
+.portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.portfolio-box .portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    background: rgba(240,95,64,.9);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+
+.text-primary {
+    color: #f05f40;     /* come back to make changes */
+}
+
+.no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-default {
+    border-color: #fff;          /* This is the default css to make changes on learn more href */
+    color: #222;                  
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    outline: 0;
+}
+
+.btn-default-black {               /* created this new css for those learn more href whose background is white */
+    border-color: #2C74BA;          /* again changed the background color and border color of learn more according to #f4a460 respective hompage color  */
+    color: #fff;                    /* bg-color; #4c9900 and border-color */
+    background-color: #2C74BA;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    outline: 0;
+}
+
+
+.btn-default:hover,    /* changing bg-color and border-color from #ededed to #e5e5e5 when latest #cccccc hover on homepage learn more for white tabs */ 
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #cccccc;
+    color: #222;
+    background-color: #cccccc;
+}
+
+
+.btn-default-black:hover,
+.btn-default-black:focus,
+.btn-default-black.focus,
+.btn-default-black:active,
+.btn-default-black.active {
+
+    border-color: #1C4A77;
+    color: #fff;
+    background-color: #1C4A77;                  /* made this new css so that learn more black background stays white #db9356 */
+                                               /* when we hover the learn more the background color changes in homepage */
+}                                              /* border-color , bg-color; #3c7a00 */ 
+
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-default .badge {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-primary {
+    border-color: #f05f40;
+    color: #fff;
+    background-color: #f05f40;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.btn-primary-homepage {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #2C74BA;                      /* border color and background color was changed to #f4a460 from # f05f40  latest #4C9900 */
+    color: #fff;
+    background-color: #2C74BA;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.btn-primary-processor {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 latest #5f9ea0 from # f05f40 #6A5ACD */
+    color: #fff;
+    background-color: #00B259;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.btn-primary-storage {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #ccac00;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    color: #fff;
+    background-color: #ccac00;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.btn-primary-gpu {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #b22222;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    color: #fff;
+    background-color: #b22222;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.btn-primary-ram {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #00b200;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    color: #fff;
+    background-color: #00b200;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-primary-display {                          /* Created this new css so that check out components color changes to respective color tabs */
+    border-color: #545454;                      /* border color and background color was changed to #f4a460 from # f05f40 */
+    color: #fff;
+    background-color: #545454;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #ed431f;
+    color: #fff;
+    background-color: #ee4b28;
+}
+
+
+.btn-primary-homepage:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-homepage:focus,                 /* changed background-color and border color to #db9356 from #ed431f latest #3c7a00 #8e8e00 */
+.btn-primary-homepage.focus,
+.btn-primary-homepage:active,
+.btn-primary-homepage.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #1C4A77;
+    color: #fff;
+    background-color: #1C4A77;
+}
+
+
+.btn-primary-processor:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-processor:focus,                 /* changed background-color and border color to #4c7e80 from #ed431f   #5448a4 */
+.btn-primary-processor.focus,
+.btn-primary-processor:active,
+.btn-primary-processor.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #008040;
+    color: #fff;
+    background-color: #008040;
+}
+
+
+.btn-primary-storage:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-storage:focus,                 /* changed background-color and border color to #db9356 from #ed431f */
+.btn-primary-storage.focus,
+.btn-primary-storage:active,
+.btn-primary-storage.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #b29600;
+    color: #fff;
+    background-color: #b29600;
+}
+
+
+.btn-primary-gpu:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-gpu:focus,                 /* changed background-color and border color to #db9356 from #ed431f */
+.btn-primary-gpu.focus,
+.btn-primary-gpu:active,
+.btn-primary-gpu.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #8e1b1b;
+    color: #fff;
+    background-color: #8e1b1b;
+}
+
+
+.btn-primary-ram:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-ram:focus,                 /* changed background-color and border color to #db9356 from #ed431f */
+.btn-primary-ram.focus,
+.btn-primary-ram:active,
+.btn-primary-ram.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #007f00;
+    color: #fff;
+    background-color: #007f00;
+}
+
+
+.btn-primary-display:hover,                  /* Created this new css so that when click on check out components hover thing color chnages */
+.btn-primary-display:focus,                 /* changed background-color and border color to #db9356 from #ed431f */
+.btn-primary-display.focus,
+.btn-primary-display:active,
+.btn-primary-display.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #2a2a2a;
+    color: #fff;
+    background-color: #2a2a2a;
+}
+
+
+
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: #f05f40;
+    background-color: #f05f40;
+}
+
+.btn-primary .badge {
+    color: #f05f40;
+    background-color: #fff;
+}
+
+.btn {
+    border: 0;
+    border-radius: 300px;
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 700;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #222;
+}
