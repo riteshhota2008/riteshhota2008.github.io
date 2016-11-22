@@ -685,9 +685,9 @@ header .header-content .header-content-inner p {
 }
 
 .btn-default-black {               /* created this new css for those learn more href whose background is white */
-    border-color: #2C74BA;          /* again changed the background color and border color of learn more according to #f4a460 respective hompage color  */
+    border-color: #333;          /* again changed the background color and border color of learn more according to #f4a460 respective hompage color  */
     color: #fff;                    /* bg-color; #4c9900 and border-color */
-    background-color: #2C74BA;
+    background-color: #333;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -701,9 +701,9 @@ header .header-content .header-content-inner p {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    border-color: #cccccc;
+    border-color: #f2f2f2;
     color: #222;
-    background-color: #cccccc;
+    background-color: #fffff1;
 }
 
 
@@ -713,9 +713,9 @@ header .header-content .header-content-inner p {
 .btn-default-black:active,
 .btn-default-black.active {
 
-    border-color: #1C4A77;
+    border-color: #000000;
     color: #fff;
-    background-color: #1C4A77;                  /* made this new css so that learn more black background stays white #db9356 */
+    background-color: #000000;                  /* made this new css so that learn more black background stays white #db9356 */
                                                /* when we hover the learn more the background color changes in homepage */
 }                                              /* border-color , bg-color; #3c7a00 */ 
 

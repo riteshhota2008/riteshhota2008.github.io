@@ -172,7 +172,7 @@ p {
 
 
 .bg-primary-storage {                /* This is the dsiplay section to change for tabs orange colour of #f0540 */
-    background-color: #e3e3e3;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
+    background-color: #ccac00;       /* Changing the colour from #f05f40 dat is orange to #545454 which is green */
                                      /* remove .bg-primary-display to make it like the previous one as orange */
                                     /* #ccac00 */
 
