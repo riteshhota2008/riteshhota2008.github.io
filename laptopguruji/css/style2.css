@@ -794,9 +794,9 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary-gpu {                          /* Created this new css so that check out components color changes to respective color tabs */
-    border-color: #b22222;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #b22222 */
+    border-color: #00B259;                      /* border color and background color was changed to #f4a460 from # f05f40 ---- #b22222 */
     color: #fff;
-    background-color: #b22222;
+    background-color: #00B259;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
