@@ -271,7 +271,7 @@ aside {
 
 /* experimenting started */
 
-
+/*
 .developed {
 
     background-image: url(../img/picjumbo.com_HNCK4011.jpg); 
@@ -280,14 +280,14 @@ aside {
     min-height: auto;
     text-align: center;
     /* color: #fff;  */                     /*background-image:url(../img/header.jpg)toWebsiteImages/background-processor.jpg */
-    background-position: center;                              /* background-image: url(../WebsiteImages/../img/header.jpg) */
-    -webkit-background-size: cover;
+/*    background-position: center;                              /* background-image: url(../WebsiteImages/../img/header.jpg) */
+/*    -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;     /* ..............added to chnge the footer image ............*/
 
 
-}
+/*}
 
 
 
@@ -361,7 +361,7 @@ aside {
     transition: all 0.8s;
 }
 
-
+*/
 
 
 /* experimenting ended */
