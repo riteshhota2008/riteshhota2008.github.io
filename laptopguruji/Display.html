@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=0.5, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="description"
           content="Want to get that perfect laptop that not just fulfills your needs but fits your budget? Check this guide out to learn about the                                            components that make a laptop so that you can make a more informed decision">
     <meta name="keywords"
@@ -95,10 +95,8 @@
     <!-- Viewport to work for IE 10 end -->
 
     <!-- Redirect to mobile link -->
+    <!--<script type="text/javascript">
 
-
-    <script type="text/javascript">
-        <!--
         if (navigator.userAgent.match(/Android/i)
                 || navigator.userAgent.match(/webOS/i)
                 || navigator.userAgent.match(/iPhone/i)
@@ -107,12 +105,25 @@
                 || navigator.userAgent.match(/BlackBerry/i)
                 || navigator.userAgent.match(/Windows Phone/i)
         ) {
-            document.location = "mobileDisplay.html";
+            document.location = "mobilehome.html";
         }
-        //-->
-    </script>
 
+    </script>-->
 
+    <!-- Disabling Image mapping on small screen devices -->
+    <style>
+        @media only screen and (max-width: 768px)	{
+            #header-link {
+                display: none;
+            }
+            #home-link {
+                display: none;
+            }
+            #shift-link {
+                display: none;
+            }
+        }
+    </style>
     <!-- Google Analytics -->
 
     <script>
