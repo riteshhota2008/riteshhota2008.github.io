@@ -1,0 +1,9 @@
+{  
+    "bundleID":"bundle05",
+    "data" : [ 
+                    { "resURL":"data/311/OneView.html", "imageLoc" : "/BookSummary/images/313/default.jpg", "title":"Learning Java", "rank": "9" },
+		    { "resURL":"data/311/OneView.html", "imageLoc" : "/BookSummary/images/412/default.jpg", "title":"Learning Java", "rank": "9" },
+		    { "resURL":"data/311/OneView.html", "imageLoc" : "/BookSummary/images/312/default.jpg", "title":"Learning Java", "rank": "9" }
+		   
+                  ]
+}

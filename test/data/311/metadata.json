@@ -1,0 +1,20 @@
+{
+    "RID": "311",
+    "contLoc":"data/311",
+    "title": "Learning Java",
+    "img": "default.jpg",
+    "rank":"9",
+    "volSold":"311",
+    "isBook":true,
+    "isExt":true,
+    "defaultPage":"OneView.html",
+    "author":"author name",
+    "publication":"publisher name",
+    "resType":"book/article/journal",
+    "dateInternal":"date resource got created in ccjl",
+    "dateExternal":"date resource was published",
+    "relatedResources":["312","411","412","511","512"],
+    "prevNode":"null",
+    "nextNode":"312 next node",
+    "pubVisible":true
+ }
