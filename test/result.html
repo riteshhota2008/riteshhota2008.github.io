@@ -10,7 +10,85 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!--<link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>-->
+
     <title>CCJL Home</title>
+
+    <style>
+
+        .bar {
+            fill: steelblue;
+        }
+
+        .bar:hover {
+            fill: brown;
+        }
+
+        .axis--x path {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .glyphicon {
+            margin-right: 5px;
+        }
+
+        .thumbnail {
+            margin-bottom: 20px;
+            padding: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        .item.list-group-item {
+            float: none;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+            background: #428bca;
+        }
+
+        .item.list-group-item .list-group-image {
+            margin-right: 10px;
+        }
+
+        .item.list-group-item .thumbnail {
+            margin-bottom: 0px;
+        }
+
+        .item.list-group-item .caption {
+            padding: 9px 9px 0px 9px;
+        }
+
+        .item.list-group-item:nth-of-type(odd) {
+            background: #eeeeee;
+        }
+
+        .item.list-group-item:before, .item.list-group-item:after {
+            display: table;
+            content: " ";
+        }
+
+        .item.list-group-item img {
+            float: left;
+        }
+
+        .item.list-group-item:after {
+            clear: both;
+        }
+
+        .list-group-item-text {
+            margin: 0 0 11px;
+        }
+
+    </style>
+
 
     <style>
         h1, h2, h3, h4, h5, h6, p, a, li, ul, label, input, span {
@@ -257,19 +335,47 @@
     </header><!--//header-->
 </div>
 
+<div class="less-container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="box-material">
+                <h4>Username:</h4>
+                <h4>Organisational Details:</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box-material">
+                <h4>Test name:</h4>
+                <h4>Topic details:</h4>
+                <h4>Type:</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box-material">
+                <h4>Attempt No:</h4>
+                <h4>Attempt date:</h4>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h1 style="text-align: center;font-size: 40px;font-weight: 300;color: #333;margin-top: 50px">Hi <span
-        style="color: rgb(0, 117, 180);">Ritesh</span>, Looks like you're doing great.</h1>
-
+<!--<div class="well well-sm">
+    <strong>Display</strong>
+    <div class="btn-group">
+        <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+            class="glyphicon glyphicon-th"></span>Grid</a>
+    </div>
+</div>-->
 
 <div class="less-container">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
+            <div class="panel-heading" role="tab" id="ResultSummary">
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                        aria-expanded="true" aria-controls="collapseOne">
-                        Collapsible Group Item #1
+                        Summary of result
                     </a>
                 </h4>
             </div>
@@ -277,6 +383,26 @@
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Section Name</th>
+                                    <th>No. of questions</th>
+                                    <th>Answered</th>
+                                    <th>Marked for Review</th>
+                                </tr>
+                                <tr>
+                                    <td>Chemistry</td>
+                                    <td>30</td>
+                                    <td>4</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>30</td>
+                                    <td>4</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
                             <h1>Chemistry</h1>
                             <svg width="640" height="480"></svg>
                             <script>
@@ -291,6 +417,7 @@
 
                                 var g = svg.append("g")
                                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
                                 d3.tsv("data.tsv", function (d) {
                                     d.frequency = +d.frequency;
@@ -332,8 +459,11 @@
                                             })
                                             .attr("width", x.bandwidth())
                                             .attr("height", function (d) {
-                                                return height - y(d.frequency);
-                                            });
+                                                        return height - y(d.frequency);
+                                                    }
+                                            );
+
+
                                 });
 
                             </script>
@@ -341,38 +471,218 @@
                     </div>
                 </div>
             </div>
-        </div><br><br>
+        </div>
+        <br><br>
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
+            <div class="panel-heading" role="tab" id="LastAttemptSummary">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Collapsible Group Item #2
+                        Last 3 attempt summary
                     </a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                    labore sustainable VHS.
+                    <div class="less-container">
+                        <div class="box-material">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Last 3 attempt score</th>
+                                    <th>Accuracy%</th>
+                                    <th>Unattempt ratio</th>
+                                    <th>Time taken/qn</th>
+                                </tr>
+                                <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>Austria</td>
+                                    <td>Mexico</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div><br><br>
+        </div>
+        <br><br>
+
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
+            <div class="panel-heading" role="tab" id="QuestionWiseAnalysis">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
                        href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Collapsible Group Item #3
+                        Question wise analysis
                     </a>
                 </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <div class="less-container">
+                        <div class="box-material">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Test name</th>
+                                    <th>Attempt no</th>
+                                    <th>Correct answer</th>
+                                    <th>Your answer</th>
+                                    <th>Accuracy</th>
+                                    <th>Score</th>
+                                    <th>Time taken</th>
+                                    <th>Benchmark</th>
+                                    <th>Overall correct answer count</th>
+                                    <th>Overal score/time</th>
+                                </tr>
+                                <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>Austria</td>
+                                    <td>Mexico</td>
+                                    <td>Austria</td>
+                                    <td>Austria</td>
+                                    <td>Austria</td>
+                                    <td>Austria</td>
+                                    <td>Austria</td>
+                                    <td>Austria</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="ConceptWiseAnalysis">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Concept wise analysis
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <div class="less-container">
+                        <div class="box-material">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" scope='colgroup'>Strong</th>
+                                    <th colspan="3" scope='colgroup'>Weak</th>
+                                    <th colspan="3" scope='colgroup'>Average</th>
+                                    <th colspan="3" scope='colgroup'>Unattempted</th>
+                                </tr>
+                                <tr>
+                                    <th scope='col'>Accuracy%</th>
+                                    <th scope='col'>Unattempted ratio</th>
+                                    <th scope='col'>Avg time/qn</th>
+                                    <th scope='col'>Accuracy%</th>
+                                    <th scope='col'>Unattempted ratio</th>
+                                    <th scope='col'>Avg time/qn</th>
+                                    <th scope='col'>Accuracy%</th>
+                                    <th scope='col'>Unattempted ratio</th>
+                                    <th scope='col'>Avg time/qn</th>
+                                    <th scope='col'>Accuracy%</th>
+                                    <th scope='col'>Unattempted ratio</th>
+                                    <th scope='col'>Avg time/qn</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="AccuracySpeedAnalysis">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Accuracy Speed analysis
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -384,334 +694,48 @@
                 </div>
             </div>
         </div>
+        <br><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="AttemptPatternAnalysis">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Attempt Pattern analysis
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <div class="less-container">
+                        <div class="box-material">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Sequence of attempt</th>
+                                    <th>Time spent on each question</th>
+                                </tr>
+                                <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>
+                                    <td>Francisco Chang</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-
-<!-- <div id="tab-2">
-
- </div>
-
- <div id="tab-3">
-     <div class="less-container">
-         <div class="box-material">
-             <table class="table table-bordered">
-                 <tr>
-                     <th>Last 3 attempt score</th>
-                     <th>Accuracy%</th>
-                     <th>Unattempt ratio</th>
-                     <th>Time taken/qn</th>
-                 </tr>
-                 <tr>
-                     <td>Alfreds Futterkiste</td>
-                     <td>Maria Anders</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                 </tr>
-                 <tr>
-                     <td>Centro comercial Moctezuma</td>
-                     <td>Francisco Chang</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                 </tr>
-                 <tr>
-                     <td>Ernst Handel</td>
-                     <td>Roland Mendel</td>
-                     <td>Austria</td>
-                     <td>Mexico</td>
-                 </tr>
-             </table>
-         </div>
-     </div>
- </div>
-</div>
-
-
-<!--<div class="tabs" style="margin-top: -65px">
-
- <nav role='navigation' class="transformer-tabs">
-     <ul>
-         <li><a href="#tab-1" class="active">Dashboard</a></li>
-         <li><a href="#tab-2">Result summary</a></li>
-         <li><a href="#tab-3">Last 3 attempt summary</a></li>
-         <li><a href="#tab-4">Question wise analysis</a></li>
-         <li><a href="#tab-5">Concept wise analysis</a></li>
-         <li><a href="#tab-6">Accuracy speed analysis</a></li>
-         <li><a href="#tab-7">Attempt pattern analysis</a></li>
-     </ul>
- </nav>
-
- <div id="tab-1" class="active">
-     <div class="less-container">
-         <div class="box-material">
-
-         </div>
-     </div>
- </div>
-
- <div id="tab-2">
-     <div class="less-container">
-         <div class="box-material">
-             <h1>Chemistry</h1>
-             <svg width="640" height="480"></svg>
-             <script>
-
-                 var svg = d3.select("svg"),
-                         margin = {top: 20, right: 20, bottom: 30, left: 40},
-                         width = +svg.attr("width") - margin.left - margin.right,
-                         height = +svg.attr("height") - margin.top - margin.bottom;
-
-                 var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-                         y = d3.scaleLinear().rangeRound([height, 0]);
-
-                 var g = svg.append("g")
-                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-                 d3.tsv("data.tsv", function (d) {
-                     d.frequency = +d.frequency;
-                     return d;
-                 }, function (error, data) {
-                     if (error) throw error;
-
-                     x.domain(data.map(function (d) {
-                         return d.letter;
-                     }));
-                     y.domain([0, d3.max(data, function (d) {
-                         return d.frequency;
-                     })]);
-
-                     g.append("g")
-                             .attr("class", "axis axis--x")
-                             .attr("transform", "translate(0," + height + ")")
-                             .call(d3.axisBottom(x));
-
-                     g.append("g")
-                             .attr("class", "axis axis--y")
-                             .call(d3.axisLeft(y).ticks(10, "%"))
-                             .append("text")
-                             .attr("transform", "rotate(-90)")
-                             .attr("y", 6)
-                             .attr("dy", "0.71em")
-                             .attr("text-anchor", "end")
-                             .text("Frequency");
-
-                     g.selectAll(".bar")
-                             .data(data)
-                             .enter().append("rect")
-                             .attr("class", "bar")
-                             .attr("x", function (d) {
-                                 return x(d.letter);
-                             })
-                             .attr("y", function (d) {
-                                 return y(d.frequency);
-                             })
-                             .attr("width", x.bandwidth())
-                             .attr("height", function (d) {
-                                 return height - y(d.frequency);
-                             });
-                 });
-
-             </script>
-         </div>
-     </div>
- </div>
-
- <div id="tab-3">
-     <div class="less-container">
-         <div class="box-material">
-             <table class="table table-bordered">
-                 <tr>
-                     <th>Last 3 attempt score</th>
-                     <th>Accuracy%</th>
-                     <th>Unattempt ratio</th>
-                     <th>Time taken/qn</th>
-                 </tr>
-                 <tr>
-                     <td>Alfreds Futterkiste</td>
-                     <td>Maria Anders</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                 </tr>
-                 <tr>
-                     <td>Centro comercial Moctezuma</td>
-                     <td>Francisco Chang</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                 </tr>
-                 <tr>
-                     <td>Ernst Handel</td>
-                     <td>Roland Mendel</td>
-                     <td>Austria</td>
-                     <td>Mexico</td>
-                 </tr>
-             </table>
-         </div>
-     </div>
- </div>
-
- <div id="tab-4">
-     <div class="less-container">
-         <div class="box-material">
-             <table class="table table-bordered">
-                 <tr>
-                     <th>Test name</th>
-                     <th>Attempt no</th>
-                     <th>Correct answer</th>
-                     <th>Your answer</th>
-                     <th>Accuracy</th>
-                     <th>Score</th>
-                     <th>Time taken</th>
-                     <th>Benchmark</th>
-                     <th>Overall correct answer count</th>
-                     <th>Overal score/time</th>
-                 </tr>
-                 <tr>
-                     <td>Alfreds Futterkiste</td>
-                     <td>Maria Anders</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                     <td>Germany</td>
-                 </tr>
-                 <tr>
-                     <td>Centro comercial Moctezuma</td>
-                     <td>Francisco Chang</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                     <td>Mexico</td>
-                 </tr>
-                 <tr>
-                     <td>Ernst Handel</td>
-                     <td>Roland Mendel</td>
-                     <td>Austria</td>
-                     <td>Mexico</td>
-                     <td>Austria</td>
-                     <td>Austria</td>
-                     <td>Austria</td>
-                     <td>Austria</td>
-                     <td>Austria</td>
-                     <td>Austria</td>
-                 </tr>
-             </table>
-         </div>
-     </div>
- </div>
-
- <div id="tab-5">
-     <div class="less-container">
-         <div class="box-material">
-             <table class="table table-bordered">
-                 <tr>
-                     <th colspan="3" scope='colgroup'>Strong</th>
-                     <th colspan="3" scope='colgroup'>Weak</th>
-                     <th colspan="3" scope='colgroup'>Average</th>
-                     <th colspan="3" scope='colgroup'>Unattempted</th>
-                 </tr>
-                 <tr>
-                     <th scope='col'>Accuracy%</th>
-                     <th scope='col'>Unattempted ratio</th>
-                     <th scope='col'>Avg time/qn</th>
-                     <th scope='col'>Accuracy%</th>
-                     <th scope='col'>Unattempted ratio</th>
-                     <th scope='col'>Avg time/qn</th>
-                     <th scope='col'>Accuracy%</th>
-                     <th scope='col'>Unattempted ratio</th>
-                     <th scope='col'>Avg time/qn</th>
-                     <th scope='col'>Accuracy%</th>
-                     <th scope='col'>Unattempted ratio</th>
-                     <th scope='col'>Avg time/qn</th>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>2</td>
-                     <td>3</td>
-                     <td>4</td>
-                     <td>5</td>
-                     <td>6</td>
-                     <td>7</td>
-                     <td>8</td>
-                     <td>9</td>
-                     <td>10</td>
-                     <td>11</td>
-                     <td>12</td>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>2</td>
-                     <td>3</td>
-                     <td>4</td>
-                     <td>5</td>
-                     <td>6</td>
-                     <td>7</td>
-                     <td>8</td>
-                     <td>9</td>
-                     <td>10</td>
-                     <td>11</td>
-                     <td>12</td>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>2</td>
-                     <td>3</td>
-                     <td>4</td>
-                     <td>5</td>
-                     <td>6</td>
-                     <td>7</td>
-                     <td>8</td>
-                     <td>9</td>
-                     <td>10</td>
-                     <td>11</td>
-                     <td>12</td>
-                 </tr>
-             </table>
-         </div>
-     </div>
- </div>
-
- <div id="tab-6">
-     <div class="less-container">
-         <div class="box-material">
-             <h1>Accuracy-Speed analysis</h1>
-             <p>Fields: mapping of qn on 2 dimensions: right/wrong and more time taken/less time taken.</p>
-         </div>
-     </div>
- </div>
-
- <div id="tab-7">
-     <div class="less-container">
-         <div class="box-material">
-             <table class="table table-bordered">
-                 <tr>
-                     <th>Sequence of attempt</th>
-                     <th>Time spent on each question</th>
-                 </tr>
-                 <tr>
-                     <td>Alfreds Futterkiste</td>
-                     <td>Maria Anders</td>
-                 </tr>
-                 <tr>
-                     <td>Centro comercial Moctezuma</td>
-                     <td>Francisco Chang</td>
-                 </tr>
-                 <tr>
-                     <td>Ernst Handel</td>
-                     <td>Roland Mendel</td>
-                 </tr>
-             </table>
-         </div>
-     </div>
- </div>
-
-</div> -->
 
 <!-- ******FOOTER****** -->
 <footer class="footer" style="margin-top: 225px">
@@ -772,6 +796,21 @@
 
     awNotices(4500);
 
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#list').click(function (event) {
+            event.preventDefault();
+            $('#products .item').addClass('list-group-item');
+        });
+        $('#grid').click(function (event) {
+            event.preventDefault();
+            $('#products .item').removeClass('list-group-item');
+            $('#products .item').addClass('grid-group-item');
+        });
+    });
 </script>
 
 </body>
