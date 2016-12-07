@@ -11,9 +11,394 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <!--<link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>-->
 
     <title>CCJL Home</title>
+
+    <style>
+        @media only screen and (max-width: 768px) {
+            #myDiv1 {
+                width: 100px;
+                margin-left: -100px;
+            }
+
+            #myDiv2 {
+                width: 100px;
+                margin-left: -100px;
+            }
+
+            #myDiv3 {
+                width: 100px;
+                margin-left: -100px;
+            }
+
+            #myDiv4 {
+                width: 100px;
+                margin-left: -100px;
+            }
+        }
+    </style>
+
+    <style>
+        .popOver1 {
+            position: absolute;
+            top: 62%;
+            left: 33%;
+            /*margin-left: -18px;*/
+        }
+
+        .popOver2 {
+            position: absolute;
+            top: 62%;
+            left: 58%;
+            /*margin-left: -18px;*/
+        }
+
+        .popOver3 {
+            position: absolute;
+            top: 62%;
+            margin-left: -10px;
+            /*margin-left: -18px;*/
+        }
+    </style>
+
+    <style>
+        .tooltip {
+            position: relative;
+            float: right;
+        }
+
+        .tooltip > .tooltip-inner {
+            background-color: #eebf3f;
+            padding: 5px 15px;
+            color: rgb(23, 44, 66);
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .popOver1 + .tooltip > .tooltip-arrow {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #eebf3f;
+        }
+
+        .popOver2 + .tooltip > .tooltip-arrow {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #eebf3f;
+        }
+
+        .popOver3 + .tooltip > .tooltip-arrow {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #eebf3f;
+        }
+    </style>
+
+    <style>
+        /*Rate Bar*/
+
+        span {
+            height: 20px;
+            display: inline-block;
+        }
+
+        .rate-bar {
+            position: relative;
+            width: 90%;
+            background-color: #fff;
+            vertical-align: middle;
+        }
+
+        .rate-bar span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: lightgreen;
+            transition: 1s;
+            width: 0;
+            transition: .4s;
+        }
+
+        /*body {
+            font: caption;
+            font-size: 1em;
+            margin-top: 50px;
+        }*/
+
+        .containers {
+            width: auto;
+            margin: 0 auto;
+            background-color: #eee;
+            padding: 2em;
+        }
+
+    </style>
+
+    <style>
+        /*New Pie Chart*/
+        .inner-circle-label2 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1;
+
+            margin-top: -12px;
+
+            color: #656d78;
+        }
+    </style>
+
+    <style>
+        /*New Pie chart*/
+        .inner-circle-label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 18px;
+            line-height: 1;
+
+            margin-top: -30px;
+
+            color: #aab2bd;
+        }
+    </style>
+
+    <style>
+        .inner-circle-result {
+            position: absolute;
+            top: 50%;
+            right: 20%;
+
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1;
+
+            margin-top: -12px;
+
+            color: #656d78;
+        }
+    </style>
+
+    <style>
+        /*
+ * Project: Donut Chart
+ * Description: JavaScript driven donut chart.
+ * Version: 0.2.0
+ *
+ * 2014 Kris Olszewski | http://www.kolszewski.com/
+ *
+ * Repo: https://github.com/KrisOlszewski/donut-chart
+ */
+
+        /**
+          * Demo scaffolding
+          * --------------------------------------------------
+          */
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+
+            margin: 0;
+
+            background: #434a54;
+
+            text-rendering: optimizeSpeed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .column {
+            float: left;
+
+            width: 300px;
+            padding: 25px;
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /**
+          * Donut Chart
+          * --------------------------------------------------
+          */
+        .donut-chart {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+            position: relative;
+
+            overflow: hidden;
+
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+            background-color: #f5f7fa;
+            /*-webkit-box-shadow: 0 0 0 6px rgba(0, 0, 0, .2);*/
+            /*box-shadow: 0 0 0 6px rgba(0, 0, 0, .2);*/
+        }
+
+        /*.outer-circle,*/
+        .inner-circle {
+            position: absolute;
+
+            border-radius: 50%;
+        }
+
+        /*.outer-circle {
+            top: 6%;
+            right: 6%;
+            bottom: 6%;
+            left: 6%;
+
+            background-color: #fff;
+            -webkit-box-shadow: inset 0 0 0 6px rgba(0, 0, 0, .2);
+            box-shadow: inset 0 0 0 6px rgba(0, 0, 0, .2);
+        }*/
+
+        .inner-circle {
+            top: 22%;
+            right: 22%;
+            bottom: 22%;
+            left: 22%;
+
+            background-color: #f5f7fa;
+            -webkit-box-shadow: 0 0 0 6px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 0 6px rgba(0, 0, 0, .2);
+        }
+
+        /*.inner-circle-label,*/
+        .inner-circle-value {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+        }
+
+        /*.inner-circle-label {
+            font-size: 18px;
+            line-height: 1;
+
+            margin-top: -30px;
+
+            color: #aab2bd;
+        }*/
+
+        .inner-circle-value {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1;
+
+            margin-top: -12px;
+
+            color: #656d78;
+        }
+
+        .wedge-container,
+        .wedge,
+        .wedge-extension,
+        .wedge-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            -webkit-transition: all .4s linear;
+            transition: all .4s linear;
+
+            border-radius: 50%;
+        }
+
+        .wedge,
+        .wedge-extension {
+            -webkit-box-shadow: inset 0 0 0 6px rgba(0, 0, 0, .2);
+            box-shadow: inset 0 0 0 6px rgba(0, 0, 0, .2);
+        }
+
+        .wedge-value {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+
+            position: absolute;
+            top: 5%;
+            left: 50%;
+
+            display: block;
+
+            width: 30px;
+            margin-left: -15px;
+
+            text-align: center;
+        }
+
+        .wedge-extension {
+            z-index: 100;
+        }
+
+        .wedge {
+            z-index: 200;
+        }
+
+        .wedge-label {
+            z-index: 300;
+        }
+
+    </style>
 
     <style>
         .line {
@@ -441,23 +826,23 @@
     </header><!--//header-->
 </div>
 
-<div class="less-container" style="margin-top: 30px">
+<div class="less-container" style="margin-top: 20px">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" style="padding-top: 10px">
             <div class="box-material" style="height: 160px">
                 <h4>Username:</h4>
                 <h4>Organisational Details:</h4>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="padding-top: 10px">
             <div class="box-material">
                 <h4>Test name:</h4>
                 <h4>Topic details:</h4>
                 <h4>Type:</h4>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="box-material" style="height: 160px">
+        <div class="col-md-4" style="padding-top: 10px">
+            <div class="box-material" style="height: 160px;">
                 <h4>Attempt No:</h4>
                 <h4>Attempt date:</h4>
             </div>
@@ -489,98 +874,127 @@
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
-                            <table class="table table-bordered">
-                                <tr>
-                                    <th>Section Name</th>
-                                    <th>No. of questions</th>
-                                    <th>Answered</th>
-                                    <th>Marked for Review</th>
-                                </tr>
-                                <tr>
-                                    <td>Chemistry</td>
-                                    <td>30</td>
-                                    <td>4</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>Total</td>
-                                    <td>30</td>
-                                    <td>4</td>
-                                    <td>0</td>
-                                </tr>
-                            </table>
+                            <div class="row">
+                                <h1 class="text-center">Chemistry</h1><br>
+                                <!--<div class="row">-->
+                                <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+                                    <div class="containers">
+                                        <h2>Benchmark</h2>
+                                        <p class="rate-one">
+                                                <span class="rate-bar">
+                                                    <span class="rate-bar-value"></span>
+                                                </span>
+                                            &nbsp;&nbsp;55
+                                                <span class="popOver1" data-toggle="tooltip" data-placement="top"
+                                                      title="JEE Mains (35%)"> </span>
+                                                <span class="popOver2" data-toggle="tooltip" data-placement="top"
+                                                      title="JEE Advance (65%)"> </span>
+                                                <span class="popOver3" data-toggle="tooltip" data-placement="top"
+                                                      title="Your Score (55%)"> </span>
+                                        </p>
+                                    </div>
+                                    <!--<div id="myDiv" style="width: 100%; height: 400px;">-->
+                                    <!-- Plotly chart will be drawn inside this DIV -->
+                                </div>
+                                <!--</div>-->
 
-                            <h1>Chemistry</h1>
+                                <!--<script>
+                                    var trace1 = {
+                                        x: [65],
+                                        y: ['Jee Advance'],
+                                        name: 'Jee Advance',
+                                        orientation: 'h',
+                                        marker: {
+                                            color: 'rgba(55,128,191,0.6)',
+                                            width: 1
+                                        },
+                                        type: 'bar'
+                                    };
 
-                            <svg class="graph" width="640" height="480"></svg>
-                            <script>
+                                    var trace2 = {
+                                        x: [35],
+                                        y: ['Jee Mains'],
+                                        name: 'Jee Mains',
+                                        orientation: 'h',
+                                        type: 'bar',
+                                        marker: {
+                                            color: 'rgba(255,153,51,0.6)',
+                                            width: 1
+                                        }
+                                    };
 
-                                var svg = d3.select("svg.graph"),
-                                        margin = {top: 20, right: 20, bottom: 30, left: 40},
-                                        width = +svg.attr("width") - margin.left - margin.right,
-                                        height = +svg.attr("height") - margin.top - margin.bottom;
+                                    var trace3 = {
+                                        x: [55],
+                                        y: ['Your Score'],
+                                        name: 'Your Score',
+                                        orientation: 'h',
+                                        type: 'bar',
+                                        marker: {
+                                            color: 'rgba(0,178,0,0.6)',
+                                            width: 1
+                                        }
+                                    };
 
-                                var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-                                        y = d3.scaleLinear().rangeRound([height, 0]);
+                                    var data = [trace1, trace2, trace3];
 
-                                var g = svg.append("g")
-                                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                                    var layout = {
+                                        //title: 'Colored Bar Chart',
+                                        barmode: 'stack'
+                                    };
 
-
-                                d3.tsv("data.tsv", function (d) {
-                                    d.frequency = +d.frequency;
-                                    return d;
-                                }, function (error, data) {
-                                    if (error) throw error;
-
-                                    x.domain(data.map(function (d) {
-                                        return d.letter;
-                                    }));
-                                    y.domain([0, d3.max(data, function (d) {
-                                        return d.frequency;
-                                    })]);
-
-                                    g.append("g")
-                                            .attr("class", "axis axis--x")
-                                            .attr("transform", "translate(0," + height + ")")
-                                            .call(d3.axisBottom(x));
-
-                                    g.append("g")
-                                            .attr("class", "axis axis--y")
-                                            .call(d3.axisLeft(y).ticks(10, "%"))
-                                            .append("text")
-                                            .attr("transform", "rotate(-90)")
-                                            .attr("y", 6)
-                                            .attr("dy", "0.71em")
-                                            .attr("text-anchor", "end")
-                                            .text("Frequency");
-
-                                    g.selectAll(".bar")
-                                            .data(data)
-                                            .enter().append("rect")
-                                            .attr("class", "bar")
-                                            .attr("x", function (d) {
-                                                return x(d.letter);
-                                            })
-                                            .attr("y", function (d) {
-                                                return y(d.frequency);
-                                            })
-                                            .attr("width", x.bandwidth())
-                                            .attr("height", function (d) {
-                                                        return height - y(d.frequency);
-                                                    }
-                                            );
-
-
-                                });
-
-                            </script>
-
+                                    Plotly.newPlot('myDiv', data, layout);
+                                </script>-->
+                                <div class="col-md-offset-1 col-md-4 col-md-offset-1" style="margin-top: 50px">
+                                    <section class="row">
+                                        <div class="column">
+                                            <div class="donut-chart" data-donut-chart="1"></div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-6" style="margin-top: 50px">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th style="width: 50%">Total questions</th>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr style="background-color: #A0D468">
+                                            <th>Correct Answers</th>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr style="background-color: #ED5565">
+                                            <th>Wrong Answers</th>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr style="background-color: #4FC1E9">
+                                            <th>Unattempted</th>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr style="background-color: #468f46">
+                                            <th>Partial right</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr style="background-color: #ffa500">
+                                            <th>Marked for review</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr style="background-color: #e5c100">
+                                            <th>Total Score</th>
+                                            <td><span id="result_score">14</span><span id="total_score">/20</span></td>
+                                        </tr>
+                                        <tr style="background-color: #f4a460">
+                                            <th>Total time taken</th>
+                                            <td><span id="result_time">50</span><span id="total_time">/60 (mins)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <br><br>
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="LastAttemptSummary">
@@ -595,159 +1009,109 @@
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
-                            <table class="table table-bordered">
-                                <tr>
-                                    <th>Last 3 attempt score</th>
-                                    <th>Accuracy%</th>
-                                    <th>Unattempt ratio</th>
-                                    <th>Time taken/qn</th>
-                                </tr>
-                                <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                </tr>
-                                <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-                                    <td>Mexico</td>
-                                </tr>
-                            </table>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1 class="text-center">Accuracy Ratio (%)</h1>
+                                    <div id="myDiv1" style="width: 480px; height: 400px;"></div>
+                                    <script>
+                                        var trace1 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [60, 45, 40],
+                                            name: 'You',
+                                            type: 'bar'
+                                        };
 
-                            <svg class="pie" width="640" height="480"></svg>
-                            <script src="//d3js.org/d3.v3.min.js"></script>
-                            <script>
-
-                                //var margin = {top: 20, right: 20, bottom: 30, left: 40},
-                                //        width = 960 - margin.left - margin.right,
-                                //        height = 500 - margin.top - margin.bottom;
-
-                                var x0 = d3.scale.ordinal()
-                                        .rangeRoundBands([0, width], .1);
-
-                                var x1 = d3.scale.ordinal();
-
-                                var y = d3.scale.linear()
-                                        .range([height, 0]);
-
-                                var color = d3.scale.ordinal()
-                                        .range(["#98abc5", "#8a89a6", "#7b6888"]);
-
-                                var xAxis = d3.svg.axis()
-                                        .scale(x0)
-                                        .orient("bottom");
-
-                                var yAxis = d3.svg.axis()
-                                        .scale(y)
-                                        .orient("left")
-                                        .tickFormat(d3.format(".2s"));
-
-                                var svg = d3.select("svg.pie"),
-                                        margin = {top: 20, right: 20, bottom: 30, left: 40},
-                                        width = +svg.attr("width") - margin.left - margin.right,
-                                        height = +svg.attr("height") - margin.top - margin.bottom;
-
-                                d3.csv("data3.csv", function (error, data) {
-                                    if (error) throw error;
-
-                                    var ageNames = d3.keys(data[0]).filter(function (key) {
-                                        return key !== "State";
-                                    });
-
-                                    data.forEach(function (d) {
-                                        d.ages = ageNames.map(function (name) {
-                                            return {name: name, value: +d[name]};
-                                        });
-                                    });
-
-                                    x0.domain(data.map(function (d) {
-                                        return d.State;
-                                    }));
-                                    x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
-                                    y.domain([0, d3.max(data, function (d) {
-                                        return d3.max(d.ages, function (d) {
-                                            return d.value;
-                                        });
-                                    })]);
-
-                                    svg.append("g")
-                                            .attr("class", "x axis")
-                                            .attr("transform", "translate(0," + height + ")")
-                                            .call(xAxis);
-
-                                    svg.append("g")
-                                            .attr("class", "y axis")
-                                            .call(yAxis)
-                                            .append("text")
-                                            .attr("transform", "rotate(-90)")
-                                            .attr("y", 6)
-                                            .attr("dy", ".71em")
-                                            .style("text-anchor", "end")
-                                            .text("Population");
-
-                                    var state = svg.selectAll(".state")
-                                            .data(data)
-                                            .enter().append("g")
-                                            .attr("class", "state")
-                                            .attr("transform", function (d) {
-                                                return "translate(" + x0(d.State) + ",0)";
-                                            });
-
-                                    state.selectAll("rect")
-                                            .data(function (d) {
-                                                return d.ages;
-                                            })
-                                            .enter().append("rect")
-                                            .attr("width", x1.rangeBand())
-                                            .attr("x", function (d) {
-                                                return x1(d.name);
-                                            })
-                                            .attr("y", function (d) {
-                                                return y(d.value);
-                                            })
-                                            .attr("height", function (d) {
-                                                return height - y(d.value);
-                                            })
-                                            .style("fill", function (d) {
-                                                return color(d.name);
-                                            });
-
-                                    var legend = svg.selectAll(".legend")
-                                            .data(ageNames.slice().reverse())
-                                            .enter().append("g")
-                                            .attr("class", "legend")
-                                            .attr("transform", function (d, i) {
-                                                return "translate(0," + i * 20 + ")";
-                                            });
-
-                                    legend.append("rect")
-                                            .attr("x", width - 18)
-                                            .attr("width", 18)
-                                            .attr("height", 18)
-                                            .style("fill", color);
-
-                                    legend.append("text")
-                                            .attr("x", width - 24)
-                                            .attr("y", 9)
-                                            .attr("dy", ".35em")
-                                            .style("text-anchor", "end")
-                                            .text(function (d) {
-                                                return d;
-                                            });
-
-                                });
-
-                            </script>
+                                        var trace2 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [55, 50, 60],
+                                            name: 'Trend',
+                                            type: 'bar'
+                                        };
 
 
+                                        var data = [trace1, trace2];
+
+                                        var layout = {barmode: 'group'};
+
+                                        Plotly.newPlot('myDiv1', data, layout);
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="text-center">Attempt Ratio (%)</h1>
+                                    <div id="myDiv2" style="width: 480px; height: 400px;"></div>
+                                    <script>
+                                        var trace1 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [20, 14, 23],
+                                            name: 'You',
+                                            type: 'bar'
+                                        };
+
+                                        var trace2 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [12, 18, 29],
+                                            name: 'Trend',
+                                            type: 'bar'
+                                        };
+
+                                        var data = [trace1, trace2];
+
+                                        var layout = {barmode: 'group'};
+
+                                        Plotly.newPlot('myDiv2', data, layout);
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="text-center">Time Taken (mins)</h1>
+                                    <div id="myDiv3" style="width: 480px; height: 400px;"></div>
+                                    <script>
+                                        var trace1 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [160, 140, 150],
+                                            name: 'You',
+                                            type: 'bar'
+                                        };
+
+                                        var trace2 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [150, 145, 160],
+                                            name: 'Trend',
+                                            type: 'bar'
+                                        };
+
+                                        var data = [trace1, trace2];
+
+                                        var layout = {barmode: 'group'};
+
+                                        Plotly.newPlot('myDiv3', data, layout);
+                                    </script>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="text-center">Total Score (out of 120)</h1>
+                                    <div id="myDiv4" style="width: 480px; height: 400px;"></div>
+                                    <script>
+                                        var trace1 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [60, 50, 40],
+                                            name: 'You',
+                                            type: 'bar'
+                                        };
+
+                                        var trace2 = {
+                                            x: ['2016', '2015', '2014'],
+                                            y: [50, 55, 50],
+                                            name: 'Trend',
+                                            type: 'bar'
+                                        };
+
+                                        var data = [trace1, trace2];
+
+                                        var layout = {barmode: 'group'};
+
+                                        Plotly.newPlot('myDiv4', data, layout);
+                                    </script>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -768,56 +1132,99 @@
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
-                            <table class="table table-bordered">
-                                <tr>
-                                    <th>Test name</th>
-                                    <th>Attempt no</th>
-                                    <th>Correct answer</th>
-                                    <th>Your answer</th>
-                                    <th>Accuracy</th>
-                                    <th>Score</th>
-                                    <th>Time taken</th>
-                                    <th>Benchmark</th>
-                                    <th>Overall correct answer count</th>
-                                    <th>Overal score/time</th>
-                                </tr>
-                                <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                    <td>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                    <td>Mexico</td>
-                                </tr>
-                                <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-                                    <td>Mexico</td>
-                                    <td>Austria</td>
-                                    <td>Austria</td>
-                                    <td>Austria</td>
-                                    <td>Austria</td>
-                                    <td>Austria</td>
-                                    <td>Austria</td>
-                                </tr>
-                            </table>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>Question</th>
+                                            <th>Correct answer</th>
+                                            <th>Your answer</th>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Germany</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Mexico</td>
+                                            <td>Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Mexico</td>
+                                            <td>Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Germany</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Mexico</td>
+                                            <td>Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Mexico</td>
+                                            <td>Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the question?</td>
+                                            <td>Germany</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-4">
+                                    <table class="table table-bordered">
+                                        <tr style="background-color: #A0D468">
+                                            <th>Correct Answers</th>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr style="background-color: #ED5565">
+                                            <th>Wrong Answers</th>
+                                            <td>4</td>
+                                        </tr>
+                                        <!--<tr style="background-color: #4FC1E9">
+                                            <th>Unattempted</th>
+                                            <td>2</td>
+                                        </tr>-->
+                                        <tr style="background-color: #468f46">
+                                            <th>Partial right</th>
+                                            <td>2</td>
+                                        </tr>
+                                        <!--<tr style="background-color: #ffa500">
+                                            <th>Marked for review</th>
+                                            <td>1</td>
+                                        </tr>-->
+                                        <tr style="background-color: #e5c100">
+                                            <th>Total Score</th>
+                                            <td><span id="result_score">16</span><span id="total_score">/20</span>
+                                            </td>
+                                        </tr>
+                                        <tr style="background-color: #f4a460">
+                                            <th>Total time taken</th>
+                                            <td><span id="result_time">50</span><span
+                                                    id="total_time">/60 (mins)</span>
+                                            </td>
+                                        </tr>
+                                        <tr style="background-color: #4FC1E9">
+                                            <th>Benchmark</th>
+                                            <td>70%</td>
+                                        </tr>
+                                        <tr style="background-color: #ffa500">
+                                            <th>Overall correct answer count</th>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr style="background-color: #EA7362">
+                                            <th>Overall score/time</th>
+                                            <td>14/50 (mins)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -834,7 +1241,8 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="headingThree">
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
@@ -1206,7 +1614,8 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="headingThree">
                 <div class="panel-body">
                     <div class="less-container">
                         <div class="box-material">
@@ -1438,7 +1847,8 @@
     <div class="bottom-bar">
         <div class="less-container">
             <div class="row">
-                <small class="copyright col-md-6 col-sm-6 col-xs-12" style="font-size: 16px">Copyright @ 2016
+                <small class="copyright col-md-6 col-sm-6 col-xs-12" style="font-size: 16px">Copyright @
+                    2016
                     GCCJL
                     KNOWLEDGE STACK
                 </small>
@@ -1507,6 +1917,335 @@
             $('#products .item').removeClass('list-group-item');
             $('#products .item').addClass('grid-group-item');
         });
+    });
+</script>
+
+<script>
+    /*
+     * Project: Donut Chart
+     * Description: JavaScript driven donut chart.
+     * Version: 0.2.0
+     *
+     * 2014 Kris Olszewski | http://www.kolszewski.com/
+     *
+     * Repo: https://github.com/KrisOlszewski/donut-chart
+     */
+
+    /**
+     * Donut Chart
+     * --------------------------------------------------
+     */
+
+    ;
+    (function (window, document, undefined) {
+
+        'use strict';
+
+        var DonutChart = DonutChart || {
+
+                    /**
+                     * Initialize Chart
+                     */
+
+                    init: function (options) {
+
+                        this.settings(options);
+                        this.createChartStructre();
+                        this.setChartMeta();
+                        this.build();
+
+                    }, // init()
+
+                    /**
+                     * Update Chart
+                     */
+
+                    update: function (options) {
+
+                        this.settings(options);
+                        this.setChartMeta();
+                        this.build();
+
+                    }, // update()
+
+                    /**
+                     * Chart Settings
+                     */
+
+                    settings: function (options) {
+
+                        this.config = {
+                            container: options.container ? options.container : this.config.container,
+                            data: options.data ? options.data : this.config.data,
+                            label: options.label ? this.label : 'Total',
+                            offset: options.offset ? options.offset : 0,
+
+                            label2: options.label2 ? this.label2 : '/'
+                        };
+
+                    }, // settings()
+
+                    /**
+                     * Build chart
+                     */
+
+                    build: function () {
+
+                        var container = this.config.container.querySelector('.outer-circle');
+                        var wedges = container.querySelectorAll('[data-wedge-id]');
+                        var wedgesIdArray = [];
+
+                        for (var i = 0; i < wedges.length; i++) {
+                            wedgesIdArray.push(wedges[i].dataset.wedgeId);
+                        }
+
+                        for (var j = 0; j < this.config.data.wedges.length; j++) {
+                            if (wedgesIdArray.indexOf(this.config.data.wedges[j].id) == -1) {
+                                var wedge = this.createWedge(this.config.data.wedges[j]);
+                                container.appendChild(wedge);
+                            }
+                            this.setWedge(this.config.data.wedges[j]);
+                        }
+
+                    }, // createWedges()
+
+                    /**
+                     * Create chart structure
+                     */
+
+                    createChartStructre: function () {
+
+                        var outer = document.createElement('div');
+                        var inner = document.createElement('div');
+                        var label = document.createElement('span');
+                        var value = document.createElement('span');
+
+
+                        var result = document.createElement('span');
+                        var label2 = document.createElement('span');
+
+
+                        outer.className = 'outer-circle';
+                        inner.className = 'inner-circle';
+                        label.className = 'inner-circle-label';
+                        value.className = 'inner-circle-value';
+
+
+                        result.className = 'inner-circle-result';
+                        label2.className = 'inner-circle-label2';
+
+
+                        this.config.container.appendChild(outer);
+                        this.config.container.appendChild(inner);
+                        inner.appendChild(label);
+                        inner.appendChild(value);
+
+
+                        inner.appendChild(result);
+                        inner.appendChild(label2);
+
+
+                    }, // createChartStructre()
+
+                    /**
+                     * Set chart meta
+                     */
+
+                    setChartMeta: function () {
+
+                        var label = this.config.container.querySelector('.inner-circle-label');
+                        var value = this.config.container.querySelector('.inner-circle-value');
+
+
+                        var result = this.config.container.querySelector('.inner-circle-result');
+                        var label2 = this.config.container.querySelector('.inner-circle-label2');
+
+
+                        label.innerHTML = this.config.label;
+                        value.innerHTML = this.config.data.total;
+
+
+                        result.innerHTML = this.config.data.result;
+                        label2.innerHTML = this.config.label2;
+
+
+                    }, // setChartMeta()
+
+                    /**
+                     * Create wedge
+                     */
+
+                    createWedge: function (data) {
+
+                        var container = document.createElement('div');
+                        var wedge = document.createElement('div');
+                        var extension = document.createElement('div');
+                        var label = document.createElement('div');
+                        var value = document.createElement('span');
+
+
+                        var result = document.createElement('span');
+                        var label2 = document.createElement('span');
+
+
+                        container.setAttribute('data-wedge-id', data.id);
+
+                        container.className = 'wedge-container';
+                        wedge.className = 'wedge';
+                        extension.className = 'wedge-extension';
+                        label.className = 'wedge-label';
+                        value.className = 'wedge-value';
+
+
+                        result.className = 'wedge-result';
+                        label2.className = 'wedge-label2';
+
+
+                        container.appendChild(wedge);
+                        container.appendChild(extension);
+                        container.appendChild(label);
+                        label.appendChild(value);
+
+                        return container;
+
+                    }, // createWedge()
+
+                    /**
+                     * Set wedge
+                     */
+
+                    setWedge: function (data) {
+
+                        var container = this.config.container.querySelector('[data-wedge-id="' + data.id + '"]');
+                        var wedge = container.querySelector('.wedge');
+                        var extension = container.querySelector('.wedge-extension');
+                        var label = container.querySelector('.wedge-label');
+                        var value = container.querySelector('.wedge-value');
+
+                        var wedgeDegrees = (360 * data.value) / this.config.data.total;
+                        var labelDegrees = wedgeDegrees / 2;
+                        var w = container.offsetWidth;
+
+                        container.style.transform = 'rotate(' + this.config.offset + 'deg)';
+                        container.style.webkitTransform = 'rotate(' + this.config.offset + 'deg)';
+                        container.style.clip = wedgeDegrees > 180 ? 'auto' : 'rect(0, ' + w + 'px, ' + w + 'px, ' + (w / 2) + 'px)';
+
+                        wedge.style.transform = 'rotate(' + wedgeDegrees + 'deg)';
+                        wedge.style.webkitTransform = 'rotate(' + wedgeDegrees + 'deg)';
+                        wedge.style.backgroundColor = this.color(data.color, 5);
+                        wedge.style.clip = 'rect(0, ' + (w / 2) + 'px, ' + w + 'px, 0)';
+
+                        if (wedgeDegrees > 180) {
+                            extension.style.opacity = 1;
+                            extension.style.transform = 'rotate(' + 180 + 'deg)';
+                            extension.style.webkitTransform = 'rotate(' + 180 + 'deg)';
+                            extension.style.backgroundColor = this.color(data.color, 5);
+                            extension.style.clip = 'rect(0, ' + (w / 2) + 'px, ' + w + 'px, 0)';
+                        } else {
+                            extension.style.opacity = 0;
+                        }
+
+                        label.style.transform = 'rotate(' + labelDegrees + 'deg)';
+                        label.style.webkitTransform = 'rotate(' + labelDegrees + 'deg)';
+                        label.style.color = this.color(data.color, -30);
+
+                        value.innerHTML = data.value;
+
+                        this.config.offset += wedgeDegrees;
+
+                    }, // setWedge()
+
+                    /**
+                     * Color Utility
+                     */
+
+                    color: function (color, percent) {
+
+                        var num = parseInt(color.slice(1), 16);
+                        var amt = Math.round(2.55 * percent);
+                        var R = (num >> 16) + amt;
+                        var B = (num >> 8 & 0x00FF) + amt;
+                        var G = (num & 0x0000FF) + amt;
+
+                        return "#" + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (B < 255 ? B < 1 ? 0 : B : 255) * 0x100 + (G < 255 ? G < 1 ? 0 : G : 255)).toString(16).slice(1);
+
+                    } // color()
+
+                }; // DonutChart
+
+        window.DonutChart = DonutChart;
+
+    })(window, document);
+
+
+    /**
+     * Demo
+     * --------------------------------------------------
+     */
+
+    // Object.create() polyfill
+    if (typeof Object.create !== 'function') {
+        Object.create = function (obj) {
+            function F() {
+            }
+
+            F.prototype = obj;
+            return new F();
+        };
+    }
+
+    // Select containers
+    var chartContainer1 = document.querySelector('[data-donut-chart="1"]');
+
+    // Data
+    var chartData1a = {
+        total: 20,
+        result: 14,
+        wedges: [
+            {id: 'a', color: '#A0D468', value: 14},
+            {id: 'b', color: '#ED5565', value: 2},
+            {id: 'c', color: '#4FC1E9', value: 2},
+            {id: 'd', color: '#468f46', value: 1},
+            {id: '3', color: '#ffa500', value: 1}
+        ]
+    };
+
+
+    // Create new chart objects
+    var Chart1 = Object.create(DonutChart);
+
+    Chart1.init({
+        container: chartContainer1,
+        data: chartData1a
+    });
+
+    setTimeout(function () {
+        setInterval(function () {
+
+            Chart1.update({
+                data: chartData1a
+            });
+
+        }, 4000);
+    }, 2000);
+
+
+</script>
+
+<script>
+    //Rate Bar
+    var val_one = $(".rate-one").text() * (1) + '%';
+    var val_two = $(".rate-two").text() * (10) + '%';
+
+    $('.rate-one .rate-bar-value').css("width", val_one);
+    $('.rate-two .rate-bar-value').css("width", val_two);
+
+</script>
+
+<script>
+    //Tooltip
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
     });
 </script>
 
