@@ -19,6 +19,16 @@
     <title>CCJL Home</title>
 
     <style>
+        .correct {
+            background-color: #A0D468
+        }
+
+        .wrong {
+            background-color: #ED5565;
+        }
+    </style>
+
+    <style>
         @media only screen and (max-width: 768px) {
             #myDiv1 {
                 width: 100px;
@@ -605,12 +615,12 @@
         }
 
         .btn-link {
-            color: #333333;
+            color: cornflowerblue;
             font-weight: 600;
         }
 
         .btn-link:hover {
-            color: #000000;
+            color: cornflowerblue;
 
         }
 
@@ -1133,94 +1143,63 @@
                     <div class="less-container">
                         <div class="box-material">
                             <div class="row">
-                                <div class="col-md-8">
-                                    <table class="table table-bordered">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered text-center">
                                         <tr>
-                                            <th>Question</th>
-                                            <th>Correct answer</th>
-                                            <th>Your answer</th>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Germany</td>
-                                            <td>Germany</td>
+                                            <th class="text-center">Question No.</th>
+                                            <th class="text-center">Correct answer</th>
+                                            <th class="text-center">Your answer</th>
+                                            <th class="text-center">Time Taken (mins)</th>
+                                            <th class="text-center">Benchmark (%)</th>
+                                            <th class="text-center">Link</th>
                                         </tr>
                                         <tr>
-                                            <td>What is the question?</td>
-                                            <td>Mexico</td>
-                                            <td>Mexico</td>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Mexico</td>
-                                            <td>Austria</td>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Germany</td>
-                                            <td>Germany</td>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Mexico</td>
-                                            <td>Mexico</td>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Mexico</td>
-                                            <td>Austria</td>
-                                        </tr>
-                                        <tr>
-                                            <td>What is the question?</td>
-                                            <td>Germany</td>
-                                            <td>Germany</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table class="table table-bordered">
-                                        <tr style="background-color: #A0D468">
-                                            <th>Correct Answers</th>
-                                            <td>14</td>
-                                        </tr>
-                                        <tr style="background-color: #ED5565">
-                                            <th>Wrong Answers</th>
-                                            <td>4</td>
-                                        </tr>
-                                        <!--<tr style="background-color: #4FC1E9">
-                                            <th>Unattempted</th>
-                                            <td>2</td>
-                                        </tr>-->
-                                        <tr style="background-color: #468f46">
-                                            <th>Partial right</th>
-                                            <td>2</td>
-                                        </tr>
-                                        <!--<tr style="background-color: #ffa500">
-                                            <th>Marked for review</th>
                                             <td>1</td>
-                                        </tr>-->
-                                        <tr style="background-color: #e5c100">
-                                            <th>Total Score</th>
-                                            <td><span id="result_score">16</span><span id="total_score">/20</span>
-                                            </td>
+                                            <td>Germany</td>
+                                            <td class="correct">Germany</td>
+                                            <td>3</td>
+                                            <td>70</td>
+                                            <td><a href="#" class="btn-link">Link for ques 1</a></td>
                                         </tr>
-                                        <tr style="background-color: #f4a460">
-                                            <th>Total time taken</th>
-                                            <td><span id="result_time">50</span><span
-                                                    id="total_time">/60 (mins)</span>
-                                            </td>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Mexico</td>
+                                            <td class="wrong">Germany</td>
+                                            <td>4</td>
+                                            <td>50</td>
+                                            <td><a href="#" class="btn-link">Link for ques 2</a></td>
                                         </tr>
-                                        <tr style="background-color: #4FC1E9">
-                                            <th>Benchmark</th>
-                                            <td>70%</td>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Spain</td>
+                                            <td></td>
+                                            <td>5</td>
+                                            <td>40</td>
+                                            <td><a href="#" class="btn-link">Link for ques 3</a></td>
                                         </tr>
-                                        <tr style="background-color: #ffa500">
-                                            <th>Overall correct answer count</th>
-                                            <td>14</td>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>England</td>
+                                            <td class="correct">England</td>
+                                            <td>4</td>
+                                            <td>60</td>
+                                            <td><a href="#" class="btn-link">Link for ques 4</a></td>
                                         </tr>
-                                        <tr style="background-color: #EA7362">
-                                            <th>Overall score/time</th>
-                                            <td>14/50 (mins)</td>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>London</td>
+                                            <td class="wrong">Germany</td>
+                                            <td>3</td>
+                                            <td>55</td>
+                                            <td><a href="#" class="btn-link">Link for ques 5</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>India</td>
+                                            <td></td>
+                                            <td>5</td>
+                                            <td>40</td>
+                                            <td><a href="#" class="btn-link">Link for ques 6</a></td>
                                         </tr>
                                     </table>
                                 </div>
