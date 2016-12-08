@@ -31,23 +31,19 @@
     <style>
         @media only screen and (max-width: 768px) {
             #myDiv1 {
-                width: 100px;
-                margin-left: -100px;
+                margin-left: -50px;
             }
 
             #myDiv2 {
-                width: 100px;
-                margin-left: -100px;
+                margin-left: -50px;
             }
 
             #myDiv3 {
-                width: 100px;
-                margin-left: -100px;
+                margin-left: -50px;
             }
 
             #myDiv4 {
-                width: 100px;
-                margin-left: -100px;
+                margin-left: -50px;
             }
         }
     </style>
@@ -55,22 +51,22 @@
     <style>
         .popOver1 {
             position: absolute;
-            top: 62%;
-            left: 33%;
+            top: 60%;
+            left: 45%;
             /*margin-left: -18px;*/
         }
 
         .popOver2 {
             position: absolute;
-            top: 62%;
-            left: 58%;
+            top: 60%;
+            left: 75%;
             /*margin-left: -18px;*/
         }
 
         .popOver3 {
             position: absolute;
-            top: 62%;
-            margin-left: -10px;
+            top: 60%;
+            left: 55%;
             /*margin-left: -18px;*/
         }
     </style>
@@ -104,7 +100,7 @@
         .popOver3 + .tooltip > .tooltip-arrow {
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            border-top: 5px solid #eebf3f;
+            border-bottom: 5px solid #eebf3f;
         }
     </style>
 
@@ -118,7 +114,7 @@
 
         .rate-bar {
             position: relative;
-            width: 90%;
+            width: 100%; /*90%*/
             background-color: #fff;
             vertical-align: middle;
         }
@@ -143,7 +139,7 @@
             width: auto;
             margin: 0 auto;
             background-color: #eee;
-            padding: 2em;
+            padding: 4em;
         }
 
     </style>
@@ -838,20 +834,20 @@
 
 <div class="less-container" style="margin-top: 20px">
     <div class="row">
-        <div class="col-md-4" style="padding-top: 10px">
+        <div class="col-md-4" style="padding: 10px">
             <div class="box-material" style="height: 160px">
                 <h4>Username:</h4>
                 <h4>Organisational Details:</h4>
             </div>
         </div>
-        <div class="col-md-4" style="padding-top: 10px">
+        <div class="col-md-4" style="padding: 10px">
             <div class="box-material">
                 <h4>Test name:</h4>
                 <h4>Topic details:</h4>
                 <h4>Type:</h4>
             </div>
         </div>
-        <div class="col-md-4" style="padding-top: 10px">
+        <div class="col-md-4" style="padding: 10px">
             <div class="box-material" style="height: 160px;">
                 <h4>Attempt No:</h4>
                 <h4>Attempt date:</h4>
@@ -892,14 +888,15 @@
                                         <h2>Benchmark</h2>
                                         <p class="rate-one">
                                                 <span class="rate-bar">
-                                                    <span class="rate-bar-value"></span>
+                                                    <span class="rate-bar-value"><span
+                                                            style="visibility: hidden;">55</span></span>
                                                 </span>
-                                            &nbsp;&nbsp;55
+                                            <!--55-->
                                                 <span class="popOver1" data-toggle="tooltip" data-placement="top"
-                                                      title="JEE Mains (35%)"> </span>
+                                                      title="JEE Mains (45%)"> </span>
                                                 <span class="popOver2" data-toggle="tooltip" data-placement="top"
-                                                      title="JEE Advance (65%)"> </span>
-                                                <span class="popOver3" data-toggle="tooltip" data-placement="top"
+                                                      title="JEE Advance (75%)"> </span>
+                                                <span class="popOver3" data-toggle="tooltip" data-placement="bottom"
                                                       title="Your Score (55%)"> </span>
                                         </p>
                                     </div>
@@ -1020,7 +1017,7 @@
                     <div class="less-container">
                         <div class="box-material">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="overflow-x:auto;">
                                     <h1 class="text-center">Accuracy Ratio (%)</h1>
                                     <div id="myDiv1" style="width: 480px; height: 400px;"></div>
                                     <script>
@@ -1046,7 +1043,7 @@
                                         Plotly.newPlot('myDiv1', data, layout);
                                     </script>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="overflow-x:auto;">
                                     <h1 class="text-center">Attempt Ratio (%)</h1>
                                     <div id="myDiv2" style="width: 480px; height: 400px;"></div>
                                     <script>
@@ -1071,7 +1068,7 @@
                                         Plotly.newPlot('myDiv2', data, layout);
                                     </script>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="overflow-x:auto;">
                                     <h1 class="text-center">Time Taken (mins)</h1>
                                     <div id="myDiv3" style="width: 480px; height: 400px;"></div>
                                     <script>
@@ -1096,7 +1093,7 @@
                                         Plotly.newPlot('myDiv3', data, layout);
                                     </script>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="overflow-x:auto;">
                                     <h1 class="text-center">Total Score (out of 120)</h1>
                                     <div id="myDiv4" style="width: 480px; height: 400px;"></div>
                                     <script>
@@ -1143,8 +1140,8 @@
                     <div class="less-container">
                         <div class="box-material">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <table class="table table-bordered text-center">
+                                <div class="col-md-12" style="overflow-x:auto;">
+                                    <table class="table table-bordered text-center table-responsive">
                                         <tr>
                                             <th class="text-center">Question No.</th>
                                             <th class="text-center">Correct answer</th>
