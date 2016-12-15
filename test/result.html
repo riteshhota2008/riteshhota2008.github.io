@@ -16,7 +16,93 @@
 
     <!--<link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>-->
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+
     <title>CCJL Home</title>
+
+    <style>
+        /*Pricing*/
+        .price_card {
+            width: 340px;
+            background: #ffffff;
+            display: inline-table;
+            top: 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.04);
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            /*margin-left: auto;*/
+            /*margin: auto;*/
+        }
+
+        /*.price_card:not(:last-child) {
+            margin-right: 40px;
+        }*/
+
+        .headers {
+            color: rgb(255, 255, 255);
+        }
+
+        .alpha .headers {
+            background: rgb(245, 166, 35);
+        }
+
+        .bravo .headers {
+            background: rgb(246, 77, 77);
+        }
+
+        .charlie .headers {
+            background: rgb(48, 219, 181);
+        }
+
+        .price {
+            width: 100%;
+            font-size: 60px;
+            font-weight: 300;
+            display: block;
+            text-align: center;
+            padding: 30px 0 10px;
+        }
+
+        .name {
+            width: 100%;
+            font-size: 20px;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+            padding: 0 0 30px;
+        }
+
+        .feature {
+            list-style: none;
+            text-align: center;
+            color: rgb(138, 138, 138);
+            margin: 0;
+            padding: 0;
+        }
+
+        .feature li {
+            margin: 0 35px;
+            padding: 20px 15px;
+            width: auto;/*200px*/
+        }
+
+        .feature li:not(:last-child) {
+            border: 1px solid rgb(242, 242, 242);
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+        }
+
+
+
+    </style>
 
     <style>
         /*Benchmark*/
@@ -1093,9 +1179,6 @@
                                         </p>
 
 
-
-
-
                                     </div>
                                     <!--<div id="myDiv" style="width: 100%; height: 400px;">-->
                                     <!-- Plotly chart will be drawn inside this DIV -->
@@ -1342,6 +1425,7 @@
                                             <th class="text-center">Question No.</th>
                                             <th class="text-center">Correct answer</th>
                                             <th class="text-center">Your answer</th>
+                                            <th class="text-center">Score</th>
                                             <th class="text-center">Time Taken (mins)</th>
                                             <th class="text-center">Benchmark (%)</th>
                                             <th class="text-center">Link</th>
@@ -1350,6 +1434,7 @@
                                             <td>1</td>
                                             <td>Germany</td>
                                             <td class="correct">Germany</td>
+                                            <td>1</td>
                                             <td>3</td>
                                             <td>70</td>
                                             <td><a href="#" class="btn-link">Link for ques 1</a></td>
@@ -1358,6 +1443,7 @@
                                             <td>2</td>
                                             <td>Mexico</td>
                                             <td class="wrong">Germany</td>
+                                            <td>0</td>
                                             <td>4</td>
                                             <td>50</td>
                                             <td><a href="#" class="btn-link">Link for ques 2</a></td>
@@ -1366,6 +1452,7 @@
                                             <td>3</td>
                                             <td>Spain</td>
                                             <td></td>
+                                            <td>0</td>
                                             <td>5</td>
                                             <td>40</td>
                                             <td><a href="#" class="btn-link">Link for ques 3</a></td>
@@ -1374,6 +1461,7 @@
                                             <td>4</td>
                                             <td>England</td>
                                             <td class="correct">England</td>
+                                            <td>1</td>
                                             <td>4</td>
                                             <td>60</td>
                                             <td><a href="#" class="btn-link">Link for ques 4</a></td>
@@ -1382,6 +1470,7 @@
                                             <td>5</td>
                                             <td>London</td>
                                             <td class="wrong">Germany</td>
+                                            <td>0</td>
                                             <td>3</td>
                                             <td>55</td>
                                             <td><a href="#" class="btn-link">Link for ques 5</a></td>
@@ -1390,9 +1479,16 @@
                                             <td>6</td>
                                             <td>India</td>
                                             <td></td>
+                                            <td>0</td>
                                             <td>5</td>
                                             <td>40</td>
                                             <td><a href="#" class="btn-link">Link for ques 6</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" colspan="3">Total Score</th>
+                                            <th class="text-center">2</th>
+                                            <th class="text-center" colspan="2">Total Time Taken</th>
+                                            <th class="text-center">24 (mins)</th>
                                         </tr>
                                     </table>
                                 </div>
@@ -1405,6 +1501,67 @@
         <br><br>
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="ConceptProficiency">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Concept Proficiency
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <div class="less-container">
+                        <div class="row">
+                            <div id="pricing">
+                            <div class="col-md-4" style="padding: 10px">
+                                <div class="price_card charlie">
+                                    <div class="headers"><br><br>
+                                        <span class="name">Proficiency - High (>75%)</span>
+                                    </div>
+                                    <ul class="feature">
+                                        <li><a href="#" class="btn-link" title="Concept Description">Concept Name 4</a>
+                                        </li>
+                                        <li><a href="#" class="btn-link" title="Concept Description">Concept Name 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="padding: 10px">
+                                <div class="price_card alpha">
+                                    <div class="headers"><br><br>
+                                        <span class="name">Proficiency - Medium (50-75%)</span>
+                                    </div>
+                                    <ul class="feature">
+                                        <li><a href="#" class="btn-link" title="Concept Description">Concept Name 6</a>
+                                        </li>
+                                        <li>Concept Name 5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="padding: 10px">
+                                <div class="price_card bravo">
+                                    <div class="headers"><br><br>
+                                        <span class="name">Proficiency - Low (<50%)</span>
+                                    </div>
+                                    <ul class="feature">
+                                        <li>Concept Name 3</li>
+                                        <li><a href="#" class="btn-link" title="Concept Description">Concept Name 1</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div></div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <!--<div class="panel panel-default">
             <div class="panel-heading" role="tab" id="ConceptWiseAnalysis">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
@@ -1775,9 +1932,9 @@
                 </div>
             </div>
         </div>
-        <br><br>
+        <br><br>-->
 
-        <div class="panel panel-default">
+        <!--<div class="panel panel-default">
             <div class="panel-heading" role="tab" id="AccuracySpeedAnalysis">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
@@ -1905,9 +2062,9 @@
                 </div>
             </div>
         </div>
-        <br><br>
+        <br><br>-->
 
-        <div class="panel panel-default">
+        <!--<div class="panel panel-default">
             <div class="panel-heading" role="tab" id="AttemptPatternAnalysis">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
@@ -2008,7 +2165,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
 </div>
