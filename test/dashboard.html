@@ -57,25 +57,31 @@
 
         ul.nav.nav-tabs.nav-justified li:nth-child(1) {
             /*background-color: #A3DE83;*/
-            border: 2px solid orange;
-            background-color: gold;
+            border: 2px solid #F6F6F6;
+            background-color: #F73F52
         }
 
         ul.nav.nav-tabs.nav-justified li:nth-child(2) {
             /*background-color: orange;*/
-            border: 2px solid orange;
-            background-color: gold
+            border: 2px solid #F6F6F6;
+            background-color: #F73F52
         }
 
         ul.nav.nav-tabs.nav-justified li:nth-child(3) {
             /*background-color: gold;*/
-            border: 2px solid orange;
-            background-color: gold
+            border: 2px solid #F6F6F6;
+            background-color: #F73F52
+        }
+
+        ul.nav.nav-tabs.nav-justified li:nth-child(4) {
+            /*background-color: gold;*/
+            border: 2px solid #F6F6F6;
+            background-color: #F73F52
         }
 
         ul.nav.nav-tabs.nav-justified li:nth-child(1):hover {
             /*background-color: #A3DE83;*/
-            background-color: gold;
+            background-color: #F73F52
         }
 
         @media (max-width: 768px) {
@@ -267,6 +273,9 @@
     <ul class="nav nav-tabs nav-justified" role="tablist" style="margin-top: 10px;"><!--background-color: #87d3b7-->
         <li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab"
                                                   data-toggle="tab">Dashboard</a></li><!--class="active"-->
+        <li role="presentation"><a href="#scoretrend" aria-controls="scoretrend" role="tab" data-toggle="tab"
+                                   style="">Score Trend</a><!--background-color: orange;-->
+        </li>
         <li role="presentation"><a href="#services" aria-controls="services" role="tab" data-toggle="tab"
                                    style="">Services</a><!--background-color: lightcoral;-->
         </li>
@@ -3341,6 +3350,139 @@
                         </div><!-- Row end -->
                     </div><!-- Subject 3 end -->
                 </div><!-- Subject Tabs end -->
+            </div>  <!-- row -->
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane fade" id="scoretrend"><!-- Score Trend Tab-->
+            <div class="less-container"><!--row-->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="material-list-card material-list-card-1">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p class="heading">Report</p>
+                                    <p class="result" data-toggle="tooltip" data-placement="top"
+                                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                       style="margin-top: 50px">ES Report 1</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 1</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-danger">12/12/16</button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 2</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-primary">13/12/16<br></button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 3</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-success">14/12/16</button>
+                                    </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="material-list-card material-list-card-1">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p class="heading">Report</p>
+                                    <p class="result" data-toggle="tooltip" data-placement="top"
+                                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                       style="margin-top: 50px">ES Report 2</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 1</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-danger">12/12/16</button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 2</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-primary">13/12/16<br></button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 3</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-success">14/12/16</button>
+                                    </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="material-list-card material-list-card-1">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p class="heading">Report</p>
+                                    <p class="result" data-toggle="tooltip" data-placement="top"
+                                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                       style="margin-top: 50px">ES Report 3</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 1</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-danger">12/12/16</button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 2</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-primary">13/12/16<br></button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 3</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-success">14/12/16</button>
+                                    </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="material-list-card material-list-card-1">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p class="heading">Report</p>
+                                    <p class="result" data-toggle="tooltip" data-placement="top"
+                                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                       style="margin-top: 50px">ES Report 4</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 1</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-danger">12/12/16</button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 2</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-primary">13/12/16<br></button>
+                                    </a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="heading">Attempt Date 3</p>
+                                    <p class="result"><a href="#">
+                                        <button type="button" class="btn btn-circle btn-success">14/12/16</button>
+                                    </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>  <!-- row -->
         </div>
     </div> <!-- Concepts end -->
