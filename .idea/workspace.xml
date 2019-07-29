@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36bd533-53ef-45d3-ad67-9091404c575f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="riteshhota2008.github.io.iws" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9233">
-              <caret line="647" column="96" lean-forward="false" selection-start-line="647" selection-start-column="96" selection-end-line="647" selection-end-column="96" />
+            <state relative-caret-position="201">
+              <caret line="306" column="79" lean-forward="false" selection-start-line="306" selection-start-column="79" selection-end-line="306" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -198,7 +196,7 @@
       <updated>1480257974865</updated>
       <workItem from="1481815458698" duration="9697000" />
       <workItem from="1482081039527" duration="651000" />
-      <workItem from="1564372342407" duration="3793000" />
+      <workItem from="1564372342407" duration="4057000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Graphs">
       <created>1480578375343</created>
@@ -274,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14141000" />
+    <option name="totallyTimeSpent" value="14405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -544,8 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9233">
-          <caret line="647" column="96" lean-forward="false" selection-start-line="647" selection-start-column="96" selection-end-line="647" selection-end-column="96" />
+        <state relative-caret-position="201">
+          <caret line="306" column="79" lean-forward="false" selection-start-line="306" selection-start-column="79" selection-end-line="306" selection-end-column="79" />
           <folding />
         </state>
       </provider>
